@@ -1,0 +1,15 @@
+
+@import url("component/header.css");
+@import url("component/footer.css");
+
+@import url("page/main.css");
+@import url("page/main_contact.css");
+@import url("page/main_experience.css");
+@import url("page/main_formation.css");
+@import url("page/main_langue.css");
+@import url("page/main_motivation.css");
+@import url("page/main_presentation.css");
+@import url("page/main_project.css");
+@import url("page/main_recommandation.css");
+@import url("page/main_skill.css");
+

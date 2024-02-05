@@ -1,0 +1,1628 @@
+
+/* ////////////////////// */
+/* //// Common style //// */
+/* ////////////////////// */
+
+/* Resetting default margin and padding for various elements */
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Color variables defined using CSS custom properties */
+:root {
+	--primary: #e6b01c;
+	--black: #000000;
+	--white: #ffffff;
+	--color-1: #333333;
+	--color-2: #cccccc;
+	--color-3: #2e4413;
+	--color-4: #1c1c1c;
+	--color-5: #efebe7;
+	--color-6: #e3d6c8;
+}
+
+/* Styling for the entire HTML document */
+html,
+body {
+	overflow-x: hidden !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Styling for the body, setting background color and font family */
+body {
+	background-color: var(--white);
+	font-family: "Poppins", sans-serif;
+}
+
+/* Styling for text selection */
+::selection {
+	background-color: var(--color-1);
+	color: var(--color-2);
+}
+
+/* Container styles with max-width and centered margin */
+.container {
+	max-width: 1280px;
+	margin: auto;
+}
+
+/* Common transition for links, buttons, and images */
+a,
+button,
+img {
+	transition: all 0.5s;
+}
+
+/* Background color utility classes */
+.white-bg {
+	background-color: var(--white);
+}
+
+.black-bg {
+	background-color: var(--black);
+}
+
+/* Heading 2 title styling */
+h2.title {
+	font-size: 272px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.06);
+	text-transform: uppercase;
+	position: absolute;
+	top: -40px;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+}
+
+/* Paragraph styling with margin, font size, and color */
+p {
+	margin: 0 24px 24px 0;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+	color: var(--color-5);
+}
+
+/* Styling for the first letter of the first paragraph inside a container */
+.paragraph p:first-child:first-letter {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+}
+
+/* Button styling with margin, padding, font size, color, and transition */
+.common-btn {
+	margin: 0;
+	padding: 17px 23px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--white);
+	background-color: var(--primary);
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	position: relative;
+	z-index: 1;
+	transition: all 0.15s;
+}
+
+/* Button hover effect with a pseudo-element overlay */
+.common-btn::before {
+	left: 6px;
+	top: 6px;
+	position: absolute;
+	content: "";
+	border: 1px solid var(--primary);
+	height: 100%;
+	width: 100%;
+	transition: all 0.15s;
+	z-index: -1;
+}
+
+/* Button hover effect - adjusting pseudo-element position */
+.common-btn:hover::before {
+	top: 0;
+	left: 0;
+}
+
+/* Button hover and focus styling */
+.common-btn:hover,
+.common-btn:focus {
+	color: var(--white);
+}
+
+/* Button focus styling with box-shadow and outline */
+.common-btn:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+/* Styling for the image inside a button */
+.common-btn img {
+	width: 24px;
+}
+
+/* Dark theme styling for heading 2 title and paragraph */
+.theme-dark h2.title {
+	color: rgb(255 255 255 / 8%);
+}
+
+.theme-dark p {
+	color: var(--color-2);
+}
+
+
+/* Réglages pour 320px */
+@media screen and (max-width: 320px) {
+  h2.title {
+    font-size: 6rem;
+    top: -1rem;
+  }
+
+  p {
+    margin: 0 1rem 1rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .common-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    gap: 0.3125rem;
+  }
+}
+
+/* Réglages pour 768px */
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  h2.title {
+    font-size: 10rem;
+    top: -2rem;
+  }
+
+  p {
+    margin: 0 1.5rem 1.5rem 0;
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .common-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    gap: 0.625rem;
+  }
+}
+
+/* Réglages pour 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  h2.title {
+    font-size: 15rem;
+    top: -3rem;
+  }
+
+  p {
+    margin: 0 2rem 2rem 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .common-btn {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+    gap: 0.75rem;
+  }
+}
+
+
+
+
+/* /////////////////////////// */
+/* /////// Navigation //////// */
+/* /////////////////////////// */
+
+
+/* Navigation bar styling */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+/* Hamburger menu button styling */
+.menu-btn {
+  display: none;
+  padding: 10px;
+  background: none;
+  border: none;
+}
+
+/* Styling for the open and close menu icons */
+.menu-btn .menu-open-icon,
+.menu-btn .menu-close-icon {
+  display: block;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+/* Styling for the inner lines of the hamburger icon */
+.menu-btn .menu-open-icon span,
+.menu-btn .menu-close-icon span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 5px 0;
+  background-color: #000;
+  transition: 0.3s;
+}
+
+/* Styling for the close menu icon */
+.menu-btn .menu-close-icon {
+  display: none;
+}
+
+/* Checkbox input styling in the menu button */
+.menu-btn input[type="checkbox"] {
+  display: none;
+}
+
+/* Logo styling */
+.logo img {
+  width: auto;
+  height: auto;
+  max-width: 40%;
+  max-height: 20%;
+}
+
+/* Vertical metro line styling */
+.ligne-metro {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  border-top: 10px solid red;
+  padding: 0;
+  writing-mode: vertical-lr;
+}
+
+/* Styling for each metro station on the line */
+.ligne-metro li {
+  display: block;
+  transform: rotate(235deg) translate(0, 35px);
+  transform-origin: left center;
+  margin: 0 60px 0 10px;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 1.2rem;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+/* Styling for metro station links */
+.ligne-metro li a {
+  color: black;
+}
+
+/* Hover and active styles for metro stations */
+.ligne-metro li:hover,
+.ligne-metro li:active {
+  color: #808080;
+  font-size: 1.5rem;
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .logo img {
+    max-width: 30%;
+    max-height: 20%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .ligne-metro {
+    display: none;
+    position: auto;
+    top: 100%;
+    left: 0;
+    right: 40px;
+    background-color: #f8f8f8;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .menu-open .ligne-metro {
+    display: block;
+  }
+
+  .ligne-metro li {
+    margin: 0;
+    padding: 10px;
+    text-align: right;
+    font-size: 0.7rem;
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    background-color: #fff;
+    padding: 7px;
+    list-style: none;
+  }
+
+  .ligne-metro li:hover,
+.ligne-metro li:active {
+  color: #808080;
+  font-size: 0.9rem;
+}
+
+
+  #menu.menu-open {
+    display: block;
+  }
+}
+
+
+
+/* ///////////////////////////////// */
+/* ////////// presentation ///////// */
+/* ///////////////////////////////// */
+
+/* Set up custom color variables using CSS variables */
+:root {
+	--gray: #222;
+	--bg-color: var(--gray);
+	--black: #000; 
+	--white: #fff;
+}
+
+/* Apply basic styling to the root container */
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100vw;
+	background-color: var(--bg-color);
+  padding-left: 10px;
+}
+
+/* Styling for animated metro lines */
+.line {
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	animation: draw 5s infinite alternate;
+}
+
+/* Define the draw animation */
+@keyframes draw {
+	from {
+		stroke-dashoffset: 400; /* Starting position for the dash offset */
+	}
+	to {
+		stroke-dashoffset: 0; /* Ending position for the dash offset (fully drawn) */
+	}
+}
+
+/* Styling for the presentation section */
+.presentation {
+	background-color: var(--black);
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Styling for the presentation image container */
+.presentation-img {
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+/* Overlay on the presentation image */
+.presentation-img::before {
+	position: absolute;
+	content: "";
+	background-color: rgba(0, 0, 0, 0.6); 
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+/* Styling for the presentation image */
+.presentation-img img {
+	width: 100%; 
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Styling for the content box in the presentation section */
+.presentation-box {
+	padding: 10px; 
+	position: relative;
+	z-index: 1;
+}
+
+/* Styling for the presentation title */
+.presentation-box h1 {
+	position: absolute;
+	top: 11%;
+	left: 0;
+	font-size: 10vw;
+	line-height: 1;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-image: url(images/bus.jpeg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	opacity: 0.6;
+	color: var(--white);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+	font-family: "Righteous", cursive;
+	z-index: -1;
+}
+
+/* Styling for the presentation text */
+.presentation-text {
+	margin: 20px 0 0 20px;
+	padding: 10px 0 0 10px;
+	position: absolute;
+	top: 0;
+	left: 0.5rem;
+	z-index: 1;
+	max-width: 90%;
+	color: var(--white); 
+}
+
+/* Styling for the secondary heading in the presentation text */
+.presentation-text h2 {
+	margin: 5rem 0 18px;
+	font-size: 8vw;
+	line-height: 1.1;
+	font-weight: 400;
+	font-style: normal;
+	position: relative;
+}
+
+/* Styling for the tertiary heading in the presentation text */
+.presentation-text h3 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 3vw;
+	padding-bottom: 2.5rem;
+	line-height: 3rem;
+	position: relative;
+}
+
+.presentation-text p {
+	margin-bottom: 20px;
+	font-size: 1.5rem; 
+	line-height: 30px;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media screen and (max-width: 1400px) {
+	#root {
+		max-width: 1100px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#root {
+		max-width: 720px;
+	}
+	.presentation-img {
+		margin-top: 40px;
+	}
+	.presentation-text {
+		max-width: 80%;
+		margin-bottom: 20px;
+	}
+	.presentation-box {
+		padding: 10px 0 0 10px;
+	}
+	.presentation-box h1 {
+		font-size: 200px;
+    line-height: 1;
+		position: relative;
+}
+	.presentation-text h2 {
+		font-size: 45px;
+	}
+	.presentation-text h3 {
+		font-size: 1.5rem;
+		line-height: 20px;
+	}
+	.presentation-text p {
+		font-size: 1rem;
+		line-height: 20px;
+	}
+}
+
+/* Media Query pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+	/* .presentation-text {
+		padding: 40px 20px; 
+  } */
+	.presentation-box h1 {
+		font-size: 100px;
+  }
+	.presentation-text h2 {
+		font-size: 30px; 
+  }
+	.presentation-text h3 {
+		font-size: 1.2rem; 
+    line-height: 1.5rem;
+  }
+	.presentation-text p {
+		font-size: 0.9rem;
+    line-height: 18px;
+  }
+}
+
+/* Media Query pour les écrans très petits */
+@media screen and (max-width: 320px) {
+	/* .presentation-text {
+		padding: 20px 10px;
+  } */
+	.presentation-box h1 {
+		font-size: 3rem;
+  }
+	.presentation-text h2 {
+		font-size: 1.5rem;
+  }
+	.presentation-text h3 {
+		font-size: 1rem;
+    line-height: 1.3rem;
+  }
+	.presentation-text p {
+		font-size: 0.8rem;
+    line-height: 16px;
+  }
+}
+
+
+
+/* /////////////////////////// */
+/* ////////// Skill ////////// */
+/* /////////////////////////// */
+
+
+/* Styling for the skill section */
+.skill-section {
+  padding: 200px 0; /* Padding for the entire section */
+}
+
+/* Styling for the skill box */
+.skill-box {
+  padding: 20px;
+  width: 80%;
+  height: auto; 
+  z-index: 1;
+  position: relative;
+}
+
+/* Styling for images within the skill box */
+.skill-box img {
+  max-width: 60%;
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
+}
+/* Styling for part skills within the skill box */
+.skill-box .part-skill {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  position: relative; 
+  margin-bottom: 10px; 
+  cursor: pointer; 
+  transition: transform 0.3s ease;
+}
+
+/* Add hover effect for part members */
+.skill-box .part-skill:hover {
+  transform: scale(1.05); 
+}
+
+/* Styling for the first part skills */
+.skill-box .part1 {
+  z-index: 2;
+  text-align: center; 
+}
+
+/* Styling for the second part skills */
+.skill-box .part2 {
+  text-align: center;
+  left: 20%;
+}
+
+/* Styling for the third part skills */
+.skill-box .part3 {
+  z-index: 2;
+  text-align: center;
+}
+
+/* Styling for the border within the skill box */
+.box-border {
+  position: absolute;
+  content: "";
+  top: 10%;
+  left: 10%;
+  border: 2px solid var(--primary);
+  height: 60%;
+  width: 80%;
+  z-index: -1;
+}
+
+/* Additional CSS for the text within the skill box */
+.skill-box p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: var(--white);
+  background-color: #e6b01c;
+  text-align: center;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+.popUp-skill p {
+  color: var(--color-1);
+  line-height: 2rem;
+}
+
+#skills-section {
+  color: var(--color-1);
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .skill-box .part-skill {
+      width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .skill-box .part1,
+  .skill-box .part2,
+  .skill-box .part3 {
+      text-align: center; 
+  }
+
+  .box-border {
+      display: none; /* Hide border on smaller screens */
+  }
+}
+
+
+
+/* /////////////////////////// */
+/* /////// Experiences /////// */
+/* /////////////////////////// */
+
+
+/* Experience Section */
+#experiences-section {
+  background-color: #000; /* Dark background color */
+  color: #fff; /* Light text color */
+  padding: 200px 0; /* Padding for the entire section */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: space-around; /* Center content horizontally */
+  align-items: stretch; /* Stretch items to match the height */
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+/* Map Styling */
+#map {
+  height: 600px; /* Adjust map height */
+  width: 100%;
+}
+
+/* Experience Box Styling */
+.experience-box {
+  color: #fff; /* Light text color */
+  height: auto; /* Auto height to fit content */
+  z-index: 1;
+  position: relative;
+  overflow: hidden; /* Prevent content overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading 3 Styling */
+.experience-box h3 {
+  font-size: 1.5em; /* Adjust heading font size */
+  margin: 20px; /* Space below the heading */
+}
+
+/* PopUp Map Styling */
+.popUp-map {
+  flex: 1; /* Expand to fill available space */
+}
+
+.marker1 p a:hover {
+  background-color: #e6b01c; /* Background color on hover */
+  color: #000; /* Text color on hover */
+}
+
+/* Styling for text within the experience box */
+.marker1,
+.marker1 p a {
+  position: relative; /* Relative positioning for absolute child elements */
+  max-width: 100%;
+  padding: 10px;
+  color: var(--white);
+  border: 2px solid var(--primary);
+  font-size: 1rem;
+  width: calc(100% - 20px); /* Adjust width as needed */
+  white-space: pre-line; /* Preserve line breaks */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  #map {
+    height: 400px; /* Adjust map height for smaller screens */
+}
+
+  .experience-box {
+    width: 100%; /* Box takes full width on smaller screens */
+  }
+}
+
+
+
+
+/* /////////////////////////// */
+/* /////// Portfolio ///////// */
+/* /////////////////////////// */
+
+
+.projects-section {
+	padding: 217px 0 0;
+}
+.project-box {
+	width: 100%;
+	height: 334px;
+	position: relative;
+}
+.project-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.project-box.big {
+  height: 100%;
+}
+.project-content {
+  padding: 2px 32px;
+  position: relative;
+  z-index: 1;
+}
+.project-content::before,
+.project-content::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 130px;
+  background: var(--color-3);
+}
+.project-content::after {
+  right: 14px;
+  bottom: 3px;
+}
+.project-content::before {
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.project-content .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.project-content p {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.project-content .common-btn {
+  padding: 8px 19px;
+}
+.project-content .common-btn img {
+  position: relative;
+}
+
+
+
+/* /////////////////////////////////////////////// */
+/* /// Formation & Motivation & Recommandation /// */
+/* /////////////////////////////////////////////// */
+
+/* Styling for the testify section */
+.testify-section {
+  padding: 180px 0 0;
+}
+
+/* Styling for the content within the testify section */
+.testify-section .content {
+  border: 2px solid var(--color-4);
+  padding: 40px 60px;
+  width: 100%;
+}
+
+/* Styling for the row within the testify section */
+.testify-section .row {
+  align-items: flex-end;
+}
+
+/* Styling for the headings within the content */
+.testify-section .content h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0px 0px 20px;
+  color: var(--color-1);
+}
+
+/* Styling for paragraphs within the content */
+.testify-section .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-1);
+}
+
+/* Styling for the image box within the testify section */
+.testify-section .img-box {
+  width: 340px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+/* Styling for images within the image box */
+.testify-section .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Styling for reverse row within the testify section */
+.testify-section .reverse-row {
+  align-items: flex-start;
+}
+
+/* Styling for image box within reverse row */
+.testify-section .reverse-row .img-box {
+  margin-left: auto;
+}
+
+
+
+/* /////////////////////////// */
+/* ///////// Langue ////////// */
+/* /////////////////////////// */
+
+
+/* Styling for the langue section */
+.langue {
+  padding: 100px 0 76px;
+}
+
+/* Styling for the heading within the langue section */
+.langue h4 {
+  margin: 0 0 40px;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  color: var(--color-5);
+}
+
+/* Styling for hobby and langue navigation */
+.langue .nav-hobby,
+.langue .nav-langue {
+  width: 90%;
+}
+
+/* Styling for hobby and langue navigation items */
+.langue .nav-item-hobby,
+.langue .nav-item-langue {
+  margin: 0;
+  padding: 1.5rem; /* Unified padding for both items */
+  position: relative;
+  list-style: none; /* Remove list bullet points */
+}
+
+/* Styling for links and paragraphs within navigation items */
+.langue .nav-item-hobby .nav-link,
+.langue .nav-item-langue p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #333333;
+  padding: 0;
+  margin: 0; /* Remove default margin for paragraphs */
+}
+
+/* Styling for links and paragraphs within navigation items with adjusted color */
+.langue .nav-item-hobby .nav-link, p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--color-5);
+  padding: 0;
+  margin: 0; /* Remove default margin for paragraphs */
+}
+
+/* Styling for language navigation items with adjusted padding */
+.langue .nav-item-langue {
+  padding-left: 64px; /* Adjusted padding for language items */
+}
+
+/* Styling for images within language navigation items */
+.langue .nav-item-langue img {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 40px;
+  height: 60px;
+}
+
+/* Styling for langue-info section */
+.langue-info {
+  padding: 56px;
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-5);
+}
+
+/* Styling for langue-box background */
+.langue-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-5);
+  z-index: -2;
+}
+
+/* Styling for langue-border */
+.langue-border {
+  left: 24px;
+  top: -24px;
+  position: absolute;
+  border: 2px solid var(--color-6);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Styling for headings within langue-info */
+.langue-info h3 {
+  margin: 0 0 24px;
+  font-size: 64px;
+  line-height: 72px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+/* Styling for paragraphs within langue-info */
+.langue-info p {
+  margin-bottom: 48px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+
+/* /////////////////////////// */
+/* /////// Contact /////////// */
+/* /////////////////////////// */
+
+/* Styling for the contact-me section */
+.contact-me {
+  padding: 100px 0 76px;
+}
+
+/* Styling for the heading within the contact-me section */
+.contact-me h4 {
+  margin: 0 0 40px;
+  font-size: 32px;
+  line-height: 48px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-1);
+}
+
+/* Styling for the navigation within the contact-me section */
+.contact-me .nav {
+  width: 80%;
+}
+
+/* Styling for navigation items within the contact-me section */
+.contact-me .nav .nav-item {
+  margin: 0 0 24px;
+  padding: 0 0 0 64px;
+  position: relative;
+}
+
+/* Styling for images within navigation items */
+.contact-me .nav .nav-item img {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 32px;
+}
+
+/* Styling for links within navigation items */
+.contact-me .nav .nav-item .nav-link {
+  font-size: 18px;
+  line-height: 28px;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+  padding: 0;
+}
+
+/* Styling for the contact-info section */
+.contact-info {
+  padding: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling for the contact-box background */
+.contact-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+/* Styling for the contact-border */
+.contact-border {
+  left: 24px;
+  top: -24px;
+  position: absolute;
+  border: 2px solid var(--color-6);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Styling for headings within contact-info */
+.contact-info h3 {
+  margin: 0 0 24px;
+  font-size: 64px;
+  line-height: 72px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+/* Styling for paragraphs within contact-info */
+.contact-info p {
+  margin-bottom: 48px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+
+
+
+/* /////////////////////////// */
+/* //// Button scroll up ///// */
+/* /////////////////////////// */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 6%; /* Adjusted distance from the bottom for better responsiveness */
+  right: 6%; /* Adjusted distance from the right for better responsiveness */
+  z-index: 99;
+  font-size: 2vw; /* Responsive font size */
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  padding: 1vw; /* Responsive padding */
+  border-radius: 6px; /* Make it circular */
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+  #myBtn {
+    font-size: 4vw; /* Responsive font size for small screens */
+    bottom: 6%; /* Adjusted distance from the bottom for small screens */
+    right: 6%; /* Adjusted distance from the right for small screens */
+    padding: 1vw; /* Responsive padding for small screens */
+  }
+}
+
+
+
+
+/* /////////////////////////// */
+/* ////////// Footer ///////// */
+/* /////////////////////////// */
+
+footer {
+  height: 50vh;
+  background-color: #000;
+  color: #fff;
+
+}
+
+
+
+
+/* ********************************** */
+/* ********* Screen : Media ********* */
+/* ********************************** */
+
+/* @media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  h2.title {
+    font-size: 110px;
+  }
+
+  .pt-5 {
+    padding-top: 3rem;
+    color: white;
+  }
+
+
+
+
+  .presentation-box {
+    padding: 40px;
+  }
+
+  .presentation-box h1 {
+    top: -5%;
+    font-size: 280px;
+    line-height: 1.3;
+  }
+
+  .presentation-text {
+    max-width: 90%;
+  }
+
+  .presentation-text h2 {
+    font-size: 65px;
+  }
+
+  .presentation-text h3 {
+    font-size: 2rem;
+    line-height: 24px;
+  }
+
+  .container {
+    max-width: calc(100% - 12px);
+  }
+  .presentation {
+    height: 100dvh;
+    min-height: 500px;
+  }
+
+  .presentation-box {
+    padding: 0px;
+  }
+
+  .presentation-box h1 {
+    top: 0;
+    font-size: 160px;
+    line-height: 1;
+    position: relative;
+  }
+
+  .presentation-text {
+    padding: 64px 0 0 48px;
+    max-width: 100%;
+  }
+
+  .presentation-text h2 {
+    font-size: 36px;
+  }
+
+  .presentation-text h3 {
+    font-size: 2rem;
+    line-height: 22px;
+  }
+
+  .presentation-img {
+    margin-top: 60px; */
+
+
+  /* .skill-section {
+    padding-top: 110px;
+  }
+
+  .skill-box .part-skill,
+  .skill-box p img{
+    font-size: 0.3rem;
+    width: 50%;
+  }
+
+  .box-border {
+    height: 50%;
+  }
+
+.skill-box .part1 {
+	top: -2%;
+	left: 10%;
+	z-index: 2;
+}
+
+.skill-box .part2 {
+	top: 25%;
+}
+
+.skill-box .part3 {
+	bottom: 25%;
+} */
+
+
+  /* .experience-section {
+    padding-top: 110px;
+  }
+
+  .projects-section {
+    padding-top: 110px;
+  }
+
+  .project-box {
+    height: 195px;
+    padding-inline: 20px;
+  }
+
+  .project-content::before,
+  .project-content::after {
+    width: 105px;
+  }
+
+  .project-content::before {
+    top: 8px;
+  }
+
+  .project-content p {
+    font-size: 10px;
+    line-height: 16px;
+  } */
+
+  /* .testify-section {
+    padding-top: 130px;
+  }
+
+  .testify-section .img-box {
+    width: 250px;
+  }
+
+  .testify-section .content {
+    padding: 20px 20px;
+  }
+
+  .testify-section .content h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .testify-section .content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .contact-me {
+    padding-block: 80px 48px;
+  }
+
+  .contact-me h4 {
+    margin-bottom: 34px;
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .contact-me .nav .nav-item {
+    margin-bottom: 20px;
+    padding-left: 48px;
+  }
+
+  .contact-me .nav .nav-item img {
+    top: -1px;
+    width: 26px;
+  }
+
+  .contact-me .nav .nav-item .nav-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contact-info {
+    padding: 52px;
+  }
+
+  .contact-info h3 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .contact-info p {
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .contact-border {
+    left: 18px;
+    top: -18px;
+  }
+} */
+
+/* Extra small screens */
+/* @media screen and (max-width: 767px) {
+  .container {
+    max-width: calc(100% - 12px);
+  }
+
+  h2.title {
+    font-size: 60px;
+    top: -6px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .paragraph p:first-child:first-letter {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .common-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .common-btn::before {
+    top: 3px;
+    left: 3px;
+  }
+
+  .common-btn img {
+    width: 16px;
+  }
+
+
+  /* .skill-section {
+    padding-top: 72px;
+  }
+
+  .skill-box .part-skill,
+  .skill-box p img{
+    font-size: 0.3rem;
+    width: 55%;
+  } */
+
+  /* .experience-section {
+    padding-top: 60px;
+  }
+
+  .experience-box {
+    margin-right: 10px;
+  } */
+
+  /* .experiencel-box::before {
+    left: 16px;
+    top: -16px;
+  } */
+
+  /* .experience-section {
+    padding-top: 52px;
+  }
+ */
+  /* .experience-box {
+    height: 300px;
+    max-width: 400px;
+    display: table;
+    margin: auto;
+  } */
+
+  /* #map {
+    top: 0;
+    height: 600px;
+    width: 100%;
+  } */
+
+  /* .projects-section {
+    padding-top: 72px;
+  } */
+
+  /* .project-box,
+  .project-box.big {
+    height: 158px;
+  } */
+
+  /* .project-box {
+    padding-inline: 2px;
+  } */
+
+ /*  .project-content p {
+    font-size: 8px;
+    line-height: 13px;
+  } */
+
+/* 
+  .testify-section {
+    padding-top: 75px;
+  }
+
+  .testify-section .row {
+    margin-right: 0;
+  }
+
+  .testify-section .img-box {
+    width: 145px;
+    width: 50%;
+    margin: -40px 0 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testify-section .content {
+    padding: 20px 20px 50px;
+    border: 2px solid var(--color-4) !important;
+  }
+
+  .testify-section .reverse-row {
+    margin-inline: 0;
+  }
+
+  .testify-section .reverse-row .img-box {
+    margin: 0 auto -40px 0;
+  }
+
+  .testify-section .reverse-row .content {
+    padding-block: 50px 20px;
+  }
+
+  .testify-section .content h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .testify-section .content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .contact-me {
+    padding-block: 40px;
+  }
+
+  .contact-me h4 {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .contact-me .nav {
+    margin-bottom: 24px;
+  }
+
+  .contact-me .nav .nav-item {
+    margin-bottom: 16px;
+    padding-left: 36px;
+  }
+
+  .contact-me .nav .nav-item img {
+    top: 0px;
+    width: 22px;
+  }
+
+  .contact-me .nav .nav-item .nav-link {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .contact-info {
+    padding: 32px 32px 42px;
+    margin-right: 12px;
+  }
+
+  .contact-info h3 {
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 42px;
+  }
+
+  .contact-info p {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .contact-border {
+    left: 12px;
+    top: -12px;
+  }
+} */
+
+
+
+
+
+
+
