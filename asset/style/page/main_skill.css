@@ -1,0 +1,127 @@
+/* /////////////////////////// */
+/* ////////// Skill ////////// */
+/* /////////////////////////// */
+
+
+/* Styling for the skill section */
+.skill-section {
+    padding: 11rem 0 0 0;
+}
+
+/* Styling for the skill box */
+.skill-box {
+    padding: 10px ;
+    width: 80%;
+    height: auto; 
+    z-index: 1;
+    position: relative;
+}
+
+/* Styling for images within the skill box */
+.skill-box img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Styling for part skills within the skill box */
+.skill-box .part-skill {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    position: relative; 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+/* Add hover effect for part members */
+.skill-box .part-skill:hover {
+    transform: scale(1.05); 
+}
+
+/* Styling for the first part skills */
+.skill-box .part1 {
+    z-index: 2;
+    text-align: center; 
+}
+
+/* Styling for the second part skills */
+.skill-box .part2 {
+    text-align: center;
+    left: 20%;
+}
+
+/* Styling for the third part skills */
+.skill-box .part3 {
+    z-index: 2;
+    text-align: center;
+}
+
+/* Styling for the border within the skill box */
+.box-border {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    border: 2px solid var(--primary);
+    height: 70%;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Additional CSS for the text within the skill box */
+.skill-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: var(--white);
+    background-color: #e6b01c;
+    text-align: center;
+    z-index: 2;
+    font-size: 1rem;
+}
+
+.popUp-skill p {
+    color: var(--color-1);
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+#skills-section {
+    color: var(--color-1);
+}
+
+.text-skill h3 {
+    padding: 1rem;
+    background-color: var(--color-5);
+    text-align: center;
+    
+
+}
+
+.detail-text-skill {
+    margin: 1.5rem;
+    padding-left: 20px;
+}
+
+
+
+
+/* Responsive Styling
+@media screen and (max-width: 768px) {
+    .skill-box .part-skill {
+        width: 100%; 
+    }
+
+    .skill-box .part1,
+    .skill-box .part2,
+    .skill-box .part3 {
+        text-align: center; 
+    }
+
+    .box-border {
+        display: none; 
+    }
+}
+ */

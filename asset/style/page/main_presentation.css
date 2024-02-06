@@ -55,6 +55,7 @@
 
 /* Styling for the presentation title*/
 .presentation-box h1 {
+    padding: 1rem 0 0 1rem;
     font-size: 200px;
     line-height: 1;
     position: relative;
@@ -73,7 +74,7 @@
 
 /* Styling for the secondary heading in the presentation text */
 .presentation-text h2 {
-    margin: 2rem 0 2rem;
+    padding: 1rem 0 1rem;
     font-size: 5rem;
     line-height: 1.1;
     font-weight: 600;
@@ -93,84 +94,62 @@
 }
 
 .presentation-text p {
-    margin-bottom: 20px;
-    font-size: 1.5rem; 
+    margin-bottom: 10px;
+    font-size: 1.25rem !important; 
     line-height: 30px;
 }
 
 
 
-/* Media Queries for Different Screen Sizes */
-@media screen and (max-width: 1400px) {
-    #root {
-        max-width: 1100px;
-    }
-}
+/* Pour les appareils mobiles */
+@media only screen and (max-width: 767px) {
 
-@media screen and (max-width: 991px) {
-    #root {
-        max-width: 720px;
-    }
-    .presentation-text {
-        max-width: 80%;
-        margin-bottom: 20px;
-    }
     .presentation-box {
-        padding: 10px 0 0 10px;
+        padding: 20px;
     }
+
     .presentation-box h1 {
-        font-size: 200px;
-        line-height: 1;
+        font-size: 5rem;
+    }
+
+    .presentation-text {
         position: relative;
+        margin: 0;
+        padding: 20px;
     }
+
     .presentation-text h2 {
-        font-size: 45px;
+        font-size: 3rem;
+        margin: 1rem 0;
     }
+
     .presentation-text h3 {
         font-size: 1.5rem;
-        line-height: 20px;
+        line-height: 2rem;
     }
-    .presentation-text p {
-        font-size: 1rem;
-        line-height: 20px;
-    }
-}
 
-/* Media Query pour les écrans plus petits */
-@media screen and (max-width: 768px) {
-    
-    .presentation-box h1 {
-        font-size: 100px;
-    }
-    .presentation-text h2 {
-        font-size: 30px; 
-    }
-    .presentation-text h3 {
-        font-size: 1.2rem; 
+    .presentation-text p {
+        font-size: 1.25rem;
         line-height: 1.5rem;
     }
-    .presentation-text p {
-        font-size: 0.9rem;
-        line-height: 18px;
-    }
 }
 
-/* Media Query pour les écrans très petits */
-@media screen and (max-width: 320px) {
+/* Pour les appareils de taille moyenne et plus grands */
+@media only screen and (min-width: 768px) {
     .presentation-box h1 {
-        font-size: 3rem;
+        font-size: 8rem;
     }
     .presentation-text h2 {
-        font-size: 1.5rem;
+        font-size: 4rem; 
     }
     .presentation-text h3 {
-        font-size: 1rem;
-    line-height: 1.3rem;
+        font-size: 2.25rem; 
+        line-height: 2rem;
     }
     .presentation-text p {
-        font-size: 0.8rem;
-    line-height: 16px;
+        font-size: 1rem;
+        line-height: 20px;
     }
 }
 
-    
+
