@@ -1,0 +1,176 @@
+/* ///////////////////////////////// */
+/* ////////// presentation ///////// */
+/* ///////////////////////////////// */
+
+/* Set up custom color variables using CSS variables */
+:root {
+    --gray: #222;
+    --bg-color: var(--gray);
+    --black: #000; 
+    --white: #fff;
+}
+
+/* Apply basic styling to the root container */
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--bg-color);
+    padding: 10px;
+}
+
+/* Styling for animated metro lines */
+.line {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: draw 5s infinite alternate;
+}
+
+/* Define the draw animation */
+@keyframes draw {
+    from {
+        stroke-dashoffset: 400; /* Starting position for the dash offset */
+    }
+    to {
+        stroke-dashoffset: 0; /* Ending position for the dash offset (fully drawn) */
+    }
+}
+
+/* Styling for the presentation section */
+.presentation {
+    background-color: var(--black);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for the content box in the presentation section */
+.presentation-box {
+    position: relative;
+    z-index: 1;
+}
+
+/* Styling for the presentation title*/
+.presentation-box h1 {
+    font-size: 200px;
+    line-height: 1;
+    position: relative;
+} 
+
+/* Styling for the presentation text */
+.presentation-text {
+    margin: 20px 0 0 20px;
+    padding: 1rem 0 0 1rem;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    max-width: 100%;
+    color: var(--white);
+}
+
+/* Styling for the secondary heading in the presentation text */
+.presentation-text h2 {
+    margin: 2rem 0 2rem;
+    font-size: 5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    font-style: normal;
+    position: relative;
+    color: #fcfcfc;
+}
+
+/* Styling for the tertiary heading in the presentation text */
+.presentation-text h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.85rem;
+    padding-bottom: 4rem;
+    line-height: 2.5rem;
+    position: relative;
+}
+
+.presentation-text p {
+    margin-bottom: 20px;
+    font-size: 1.5rem; 
+    line-height: 30px;
+}
+
+
+
+/* Media Queries for Different Screen Sizes */
+@media screen and (max-width: 1400px) {
+    #root {
+        max-width: 1100px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #root {
+        max-width: 720px;
+    }
+    .presentation-text {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    .presentation-box {
+        padding: 10px 0 0 10px;
+    }
+    .presentation-box h1 {
+        font-size: 200px;
+        line-height: 1;
+        position: relative;
+    }
+    .presentation-text h2 {
+        font-size: 45px;
+    }
+    .presentation-text h3 {
+        font-size: 1.5rem;
+        line-height: 20px;
+    }
+    .presentation-text p {
+        font-size: 1rem;
+        line-height: 20px;
+    }
+}
+
+/* Media Query pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+    
+    .presentation-box h1 {
+        font-size: 100px;
+    }
+    .presentation-text h2 {
+        font-size: 30px; 
+    }
+    .presentation-text h3 {
+        font-size: 1.2rem; 
+        line-height: 1.5rem;
+    }
+    .presentation-text p {
+        font-size: 0.9rem;
+        line-height: 18px;
+    }
+}
+
+/* Media Query pour les écrans très petits */
+@media screen and (max-width: 320px) {
+    .presentation-box h1 {
+        font-size: 3rem;
+    }
+    .presentation-text h2 {
+        font-size: 1.5rem;
+    }
+    .presentation-text h3 {
+        font-size: 1rem;
+    line-height: 1.3rem;
+    }
+    .presentation-text p {
+        font-size: 0.8rem;
+    line-height: 16px;
+    }
+}
+
+    

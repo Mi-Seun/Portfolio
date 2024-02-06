@@ -4,6 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --open",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,5 +17,9 @@
     "lite-server": "^2.6.1",
     "parcel-bundler": "^1.12.5",
     "webpack": "^5.90.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

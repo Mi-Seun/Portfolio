@@ -63,14 +63,14 @@ return L.icon({
 }
 
 // Creating different icons
-let developpeurIcon = createCustomIcon('styles/images/icon_dev.png');
-let restaurantIcon = createCustomIcon('styles/images/icon_restaurant.png');
-let ongIcon = createCustomIcon('styles/images/icon_ong.png');
-let managementIcon = createCustomIcon('styles/images/icon_event.png');
-let globalIcon = createCustomIcon('styles/images/icon_global.png');
-let consultingIcon = createCustomIcon('styles/images/icon_consulting.png');
-let associationIcon = createCustomIcon('styles/images/icon_association.png');
-let designIcon = createCustomIcon('styles/images/icon_design.png');
+let developpeurIcon = createCustomIcon('asset/images/icon/icon_dev.png');
+let restaurantIcon = createCustomIcon('asset/images/icon/icon_restaurant.png');
+let ongIcon = createCustomIcon('asset/images/icon/icon_ong.png');
+let managementIcon = createCustomIcon('asset/images/icon/icon_event.png');
+let globalIcon = createCustomIcon('asset/images/icon/icon_global.png');
+let consultingIcon = createCustomIcon('asset/images/icon/icon_consulting.png');
+let associationIcon = createCustomIcon('asset/images/icon/icon_association.png');
+let designIcon = createCustomIcon('asset/images/icon/icon_design.png');
 
 // Function to add markers to the map with popups
 function addMarkerToMap(coordinates, icon, popupContent, zoomLevel, markerId) {
@@ -134,6 +134,58 @@ L.control.layers(null, {
 position: 'bottomright',
 collapsed: false
 }).addTo(map);
+
+
+
+/* /////////////////////////////////// */
+/* /////// Part of Motivation //////// */
+/* /////////////////////////////////// */
+
+
+// Handling click events to open PDF documents
+const openPdfBtn1 = document.getElementById('openPdfBtn1');
+const openPdfBtn2 = document.getElementById('openPdfBtn2');
+
+openPdfBtn1.addEventListener('click', function() {
+    // Define the URL of the first PDF document
+    const pdfURL1 = 'styles/images/pdf/recommandation_cogether.pdf';
+    // Open the first PDF document in a new tab/window
+    window.open(pdfURL1, '_blank');
+});
+
+openPdfBtn2.addEventListener('click', function() {
+    // Define the URL of the second PDF document
+    const pdfURL2 = 'your/other/pdf/file.pdf';
+    // Open the second PDF document in a new tab/window
+    window.open(pdfURL2, '_blank');
+});
+
+
+
+/* /////////////////////////// */
+/* ///// Button scroll up //// */
+/* /////////////////////////// */
+
+
+//Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 
 
@@ -234,56 +286,6 @@ collapsed: false
 // });
 
 
-
-/* /////////////////////////////////// */
-/* /////// Part of Motivation //////// */
-/* /////////////////////////////////// */
-
-
-// Handling click events to open PDF documents
-const openPdfBtn1 = document.getElementById('openPdfBtn1');
-const openPdfBtn2 = document.getElementById('openPdfBtn2');
-
-openPdfBtn1.addEventListener('click', function() {
-    // Define the URL of the first PDF document
-    const pdfURL1 = 'styles/images/pdf/recommandation_cogether.pdf';
-    // Open the first PDF document in a new tab/window
-    window.open(pdfURL1, '_blank');
-});
-
-openPdfBtn2.addEventListener('click', function() {
-    // Define the URL of the second PDF document
-    const pdfURL2 = 'your/other/pdf/file.pdf';
-    // Open the second PDF document in a new tab/window
-    window.open(pdfURL2, '_blank');
-});
-
-
-
-/* /////////////////////////// */
-/* ///// Button scroll up //// */
-/* /////////////////////////// */
-
-
-//Get the button
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
 
 
 
