@@ -3,12 +3,10 @@
 /* /////////////////////////// */
 
 
-/* Styling for the skill section */
 .skill-section {
-    padding: 11rem 0 0 0;
+    padding: 16rem 0 0 0;
 }
 
-/* Styling for the skill box */
 .skill-box {
     padding: 10px ;
     width: 80%;
@@ -17,7 +15,6 @@
     position: relative;
 }
 
-/* Styling for images within the skill box */
 .skill-box img {
     width: 80%;
     height: 80%;
@@ -25,7 +22,6 @@
     object-position: center;
 }
 
-/* Styling for part skills within the skill box */
 .skill-box .part-skill {
     aspect-ratio: 1 / 1;
     width: 100%;
@@ -34,37 +30,32 @@
     transition: transform 0.3s ease;
 }
 
-/* Add hover effect for part members */
 .skill-box .part-skill:hover {
     transform: scale(1.05); 
 }
 
-/* Styling for the first part skills */
 .skill-box .part1 {
     z-index: 2;
     text-align: center;
-
-}
-.skill-box a {
-    width: 12rem;
-    height: 50px;
-    top: -50%;
-    
 }
 
-/* Styling for the second part skills */
 .skill-box .part2 {
     text-align: center;
     left: 30%;
 }
 
-/* Styling for the third part skills */
 .skill-box .part3 {
     z-index: 2;
     text-align: center;
 }
 
-/* Styling for the border within the skill box */
+.skill-box a {
+    width: 12rem;
+    height: 50px;
+    top: -50%;
+    font-size: 1rem;
+}
+
 .box-border {
     position: absolute;
     top: 10%;
@@ -75,7 +66,6 @@
     z-index: -1;
 }
 
-/* Additional CSS for the text within the skill box */
 .popUp-skill p {
     color: var(--color-1);
     line-height: 2rem;
@@ -90,8 +80,6 @@
     padding: 1rem;
     background-color: var(--color-5);
     text-align: center;
-    
-
 }
 
 .detail-text-skill {
@@ -101,6 +89,15 @@
 
 
 @media only screen and (max-width: 768px) {
+
+    .skill-section {
+        padding: 7rem 0 0 0;
+    }
+    .skill-section h2{
+        font-size: 2.3rem;
+    }
+
+
     .skill-box {
         width: 80%; 
         padding: 0;
@@ -124,7 +121,10 @@
     }
 
     .skill-box a {
-        width: 50%;
+        width: 60%;
+        font-size: 0.8rem;
+        line-height: 1;
     }
 }
+
 

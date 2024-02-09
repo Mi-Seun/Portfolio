@@ -62,10 +62,10 @@ document.addEventListener("DOMContentLoaded", function() {
 /* /////// Part of Expériences ///////// */
 /* ///////////////////////////////////// */
 
-// Création d'une nouvelle carte Leaflet
+// Création d'une nouvelle carte Leaflet : https://leafletjs.com/examples/quick-start/
 let map = L.map('map', {
-    center: [26.65341, 62.226563], // Coordonnées pour Lyon [lat, long]
-    zoom: 2
+    center: [35.508378, 69.70685], // Coordonnées pour Lyon [lat, long]
+    zoom: 1
 });
 
 // Ajout des couches de fond de carte pour Lyon
@@ -90,6 +90,13 @@ function createCustomIcon(iconUrl) {
     });
 }
 
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+map.on('click', onMapClick);
+
+
 // Création de différentes icônes
 let developpeurIcon = createCustomIcon('asset/images/icon/icon_dev.png');
 let restaurantIcon = createCustomIcon('asset/images/icon/icon_restaurant.png');
@@ -102,7 +109,6 @@ let designIcon = createCustomIcon('asset/images/icon/icon_design.png');
 
 // Fonction pour ajouter des marqueurs à la carte avec des popups
 function addMarkerToMap(coordinates, icon, popupContent, zoomLevel, markerId) {
-
     let marker = L.marker(coordinates, { icon: icon }).addTo(map);
     marker.bindPopup(popupContent).openPopup();
     marker.on('click', function () {
@@ -159,6 +165,7 @@ L.control.layers(null, {
 
 
 
+
 /* /////////////////////////////////// */
 /* /////// Part of Motivation //////// */
 /* /////////////////////////////////// */
@@ -177,7 +184,7 @@ openPdfBtn1.addEventListener('click', function() {
 
 openPdfBtn2.addEventListener('click', function() {
     // Define the URL of the second PDF document
-    const pdfURL2 = 'asset/images/pdf/recommandation_jpfa.pdf';
+    const pdfURL2 = 'asset/images/pdf/recommandation_ jpfa.pdf';
     // Open the second PDF document in a new tab/window
     window.open(pdfURL2, '_blank');
 });

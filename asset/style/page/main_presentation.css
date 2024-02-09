@@ -2,6 +2,7 @@
 /* ////////// presentation ///////// */
 /* ///////////////////////////////// */
 
+
 /* Set up custom color variables using CSS variables */
 :root {
     --gray: #222;
@@ -39,7 +40,6 @@
     }
 }
 
-/* Styling for the presentation section */
 .presentation {
     background-color: var(--black);
     width: 100%;
@@ -47,21 +47,17 @@
     overflow: hidden;
 }
 
-/* Styling for the content box in the presentation section */
 .presentation-box {
     position: relative;
     z-index: 1;
 }
 
-/* Styling for the presentation title*/
-.presentation-box h1 {
+#headingBig {
+    margin: 1rem 0 1rem 0 ;
     padding: 1rem 0 0 1rem;
-    font-size: 200px;
-    line-height: 1;
-    position: relative;
+    font-size: 4rem;
 } 
 
-/* Styling for the presentation text */
 .presentation-text {
     margin: 20px 0 0 20px;
     padding: 1rem 0 0 1rem;
@@ -72,8 +68,7 @@
     color: var(--white);
 }
 
-/* Styling for the secondary heading in the presentation text */
-.presentation-text h2 {
+.presentation-text h1 {
     padding: 1rem 0 1rem;
     font-size: 5rem;
     line-height: 1.1;
@@ -83,7 +78,6 @@
     color: #fcfcfc;
 }
 
-/* Styling for the tertiary heading in the presentation text */
 .presentation-text h3 {
     font-style: normal;
     font-weight: 400;
@@ -105,11 +99,7 @@
 @media only screen and (max-width: 767px) {
 
     .presentation-box {
-        padding: 20px;
-    }
-
-    .presentation-box h1 {
-        font-size: 5rem;
+        padding: 20px 0 0;
     }
 
     .presentation-text {
@@ -118,7 +108,7 @@
         padding: 20px;
     }
 
-    .presentation-text h2 {
+    .presentation-text h1 {
         font-size: 3rem;
         margin: 1rem 0;
     }
@@ -136,10 +126,8 @@
 
 /* Pour les appareils de taille moyenne et plus grands */
 @media only screen and (min-width: 768px) {
-    .presentation-box h1 {
-        font-size: 8rem;
-    }
-    .presentation-text h2 {
+
+    .presentation-text h1 {
         font-size: 4rem; 
     }
     .presentation-text h3 {
@@ -151,5 +139,6 @@
         line-height: 20px;
     }
 }
+
 
 
