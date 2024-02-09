@@ -34,11 +34,26 @@ document.querySelectorAll('.nav a').forEach(link => {
 /* ////////// Part of skills /////////// */
 /* ///////////////////////////////////// */
 
+// JavaScript pour gérer les clics sur les éléments de compétence//
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const partSkills = document.querySelectorAll('.part-skill');
 
+    partSkills.forEach(partSkill => {
+        partSkill.addEventListener('click', function() {
+            const index = Array.from(partSkill.parentNode.children).indexOf(partSkill);
+            
+            const popUps = document.querySelectorAll('.popUp-skill .text-skill');
+            
+            popUps.forEach(popUp => {
+                popUp.style.display = 'none';
+            });
 
-
+            popUps[index].style.display = 'block';
+        });
+    });
+});
 
 
 
@@ -100,22 +115,33 @@ function addMarkerToMap(coordinates, icon, popupContent, zoomLevel, markerId) {
 }
 
 // Ajout de marqueurs avec différentes icônes et popups
-let marker1 = addMarkerToMap([45.7381, 4.8331], developpeurIcon, "<b>Développeur Web, Ice développement, Lyon<br><br>2023:<br>- Création de sites web<br>- WordPress</b>", 13, 'marker1');
-let marker2 = addMarkerToMap([45.7645, 4.8292], restaurantIcon, "<b>Gérant de restaurant, Minanée<br><br>2007-2013:<br>- </b>", 13);
-let marker3 = addMarkerToMap([45.7717, 4.8511], restaurantIcon, "<b>Gérant de restaurant, Sushido<br><br>2002-2007:<br>- </b>", 13);
-let marker4 = addMarkerToMap([45.752643, 4.829307], designIcon, "<b>Design<br><br>2022:<br>- Création de site web, logo, carte de menu<br>- Conseil en gestion de restaurant</b>", 13);
-let marker5 = addMarkerToMap([48.019324, -1.604004], consultingIcon, "<b>Consultant en gestion de restaurant, Séoul to go, Rennes<br><br>2022:<br>- Création de site web, logo, carte de menu<br>- Conseil en gestion de restaurant</b>", 13);
-let marker6 = addMarkerToMap([45.767792, 4.835991], managementIcon, "<b>Président de l'Association des Coréens de Lyon, Représentant européen, Organisateur d'événements, Lyon<br><br>2013:<br>- </b>", 13);
-let markerAfrica = addMarkerToMap([-30.5595, 22.9375], ongIcon, "<b>ONG de bénévolat caritatif, Afrique du Sud<br><br>2014-2019:<br>- Chef d'équipe, Aide sociale, Cuisinier</b>", 13);
-let markerLondon = addMarkerToMap([51.5074, -0.1278], ongIcon, "<b>Bénévole</b>", 13);
-let markerSeoul = addMarkerToMap([37.5665, 126.9780], ongIcon, "<b>Secrétaire, KIMM (Institut coréen de machines et de matériaux)</b>", 13);
-let markerMonde = addMarkerToMap([-23.885838, 126.5625], globalIcon, "<b>KOWWINER : Propriétaire d'entreprises internationales, Kowiner</b>", 13);
-let markerEurope = addMarkerToMap([48.136767, 16.435547], globalIcon, "<b>Représentant européen</b>", 13);
+let marker1 = addMarkerToMap([45.7381, 4.8331], developpeurIcon, 
+    "<b>Développeur Web 2023 - ice developement<br><br>- Création de sites web<br>- WordPress, php, JavaScript, mysql, CSS</b>", 13, 'marker1');
+let marker2 = addMarkerToMap([45.7645, 4.8292], restaurantIcon, 
+    "<b>Management 2007-2013 - Mnanée<br><br>- Gérant de restaurant<br>- Création de supports de communication papier & site Web, photographie</b>", 13);
+let marker3 = addMarkerToMap([45.7717, 4.8511], restaurantIcon,
+    "<b>Management 2002-2007 - Sushido<br><br>- Manager de restaurant</b>", 13);
+let marker4 = addMarkerToMap([45.752643, 4.829307], designIcon, 
+    "<b>Infographie-Design 2007-2013, 2022<br><br>- Création de site web, logo, carte de menu<br>- Restaurant Minanée, sushido, Séoul to go</b>", 13);
+let marker5 = addMarkerToMap([48.019324, -1.604004], consultingIcon, 
+    "<b>Consultant en gestion de restaurant 2022 - Séoul to go, Rennes<br><br>- Création de site web, logo, carte de menu<br>- Conseil en gestion de restaurant</b>", 13);
+let marker6 = addMarkerToMap([45.767792, 4.835991], managementIcon, 
+    "<b>Organisation<br><br>- Présidente de l’association des lyonnais coréens, représentante européenne, organisatrice d’évènements, Japan Touch, fêtes consulaires, mode, culture/langue</b>", 13);
+let markerAfrica = addMarkerToMap([-30.5595, 22.9375], ongIcon, 
+    "<b>Humanitaire 2017<br><br>- ONG de bénévolat caritatif, Afrique du Sud<br>- Chef d'équipe, Aide sociale, Cuisinier</b>", 13);
+let markerLondon = addMarkerToMap([51.5074, -0.1278], ongIcon,
+    "<b>Humanitaire 2019<br><br>- ONG de bénévolat caritatif, Londres<br>- Chef d'équipe, Aide sociale, Cuisinier</b>", 13);
+let markerSeoul = addMarkerToMap([37.5665, 126.9780], ongIcon,
+    "<b>Ademistration - KIMM (Institut coréen de machines et de matériaux) <br><br>- Secrétaire </b>", 13);
+let markerMonde = addMarkerToMap([-23.885838, 126.5625], globalIcon, 
+    "<b>Réseaux 2011- 2019 - KOWWINER<br><br>- Gérantes d’entreprises internationales</b>", 13);
+let markerEurope = addMarkerToMap([48.136767, 16.435547], globalIcon, 
+    "<b>Réseaux 2014 - Fédération des Coréens en Europe<br><br>- Représentant la France</b>", 13);
 
 // Popup autonome pour afficher "Voir mes expériences"
 let standalonePopup = L.popup()
     .setLatLng([57.891497, 61.171875])
-    .setContent("Voir mes expériences")
+    .setContent("Cliquez le pionteur")
     .openOn(map);
 
 // Contrôle de couche pour les éléments de la carte
@@ -144,14 +170,14 @@ const openPdfBtn2 = document.getElementById('openPdfBtn2');
 
 openPdfBtn1.addEventListener('click', function() {
     // Define the URL of the first PDF document
-    const pdfURL1 = 'styles/images/pdf/recommandation_cogether.pdf';
+    const pdfURL1 = 'asset/images/pdf/recommandation_cogether.pdf';
     // Open the first PDF document in a new tab/window
     window.open(pdfURL1, '_blank');
 });
 
 openPdfBtn2.addEventListener('click', function() {
     // Define the URL of the second PDF document
-    const pdfURL2 = 'your/other/pdf/file.pdf';
+    const pdfURL2 = 'asset/images/pdf/recommandation_jpfa.pdf';
     // Open the second PDF document in a new tab/window
     window.open(pdfURL2, '_blank');
 });
@@ -182,33 +208,6 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-
-
-
-
-
-/* ///////////////////////////////////// 
-
-document.addEventListener('DOMContentLoaded', function () {
-// Add a class to your <a> tags to make them easier to target
-document.querySelectorAll('.popUp-map a').forEach(function (link) {
-    link.addEventListener('click', function (event) {
-    event.preventDefault();
-    let markerId = this.getAttribute('data-marker');
-    updatePopUpContentForMarker(markerId);
-    // Open the popUp-map
-    $('.popUp-map').show();
-    });
-});
-});
-
-function updatePopUpContentForMarker(markerId) {
-let popUpMapDiv = document.querySelector('.popUp-map p');
-let markerContent = getMarkerContent(markerId);
-popUpMapDiv.innerHTML = markerContent;
-}
-*/
 
 
 

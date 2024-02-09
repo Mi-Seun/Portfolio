@@ -42,13 +42,20 @@
 /* Styling for the first part skills */
 .skill-box .part1 {
     z-index: 2;
-    text-align: center; 
+    text-align: center;
+
+}
+.skill-box a {
+    width: 12rem;
+    height: 50px;
+    top: -50%;
+    
 }
 
 /* Styling for the second part skills */
 .skill-box .part2 {
     text-align: center;
-    left: 20%;
+    left: 30%;
 }
 
 /* Styling for the third part skills */
@@ -62,26 +69,13 @@
     position: absolute;
     top: 10%;
     left: 0%;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--color-6);
     height: 70%;
     width: 100%;
     z-index: -1;
 }
 
 /* Additional CSS for the text within the skill box */
-.skill-box p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    color: var(--white);
-    background-color: #e6b01c;
-    text-align: center;
-    z-index: 2;
-    font-size: 1rem;
-}
-
 .popUp-skill p {
     color: var(--color-1);
     line-height: 2rem;
@@ -106,22 +100,31 @@
 }
 
 
-
-
-/* Responsive Styling
-@media screen and (max-width: 768px) {
-    .skill-box .part-skill {
-        width: 100%; 
+@media only screen and (max-width: 768px) {
+    .skill-box {
+        width: 80%; 
+        padding: 0;
     }
 
-    .skill-box .part1,
-    .skill-box .part2,
-    .skill-box .part3 {
-        text-align: center; 
+    .skill-box img {
+        width: 80%;
+        height: 80%;
     }
 
-    .box-border {
-        display: none; 
+    .popUp-skill {
+        text-align: center;
+    }
+
+    .text-skill h3 {
+        margin-top: 20px;
+    }
+
+    .detail-text-skill {
+        padding: 10px;
+    }
+
+    .skill-box a {
+        width: 50%;
     }
 }
- */
+

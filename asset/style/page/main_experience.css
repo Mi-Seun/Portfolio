@@ -1,0 +1,57 @@
+/* /////////////////////////// */
+/* /////// Experiences /////// */
+/* /////////////////////////// */
+
+
+#experiences-section {
+    background-color: var(--black); 
+    color: #fff; 
+    padding: 12rem 0 0 0; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Stretch items to match the height */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+}
+
+.experience-box {
+    color: #fff;
+    height: auto; 
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-box h3 {
+    margin: 20px;
+    padding: 10px;
+    color: var(--white);
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    text-align: center;
+}
+
+.experience-box h5 {
+    margin:  20px;
+    margin-bottom: 0 !important;
+    padding: 10px;
+    padding-bottom: 0 !important;
+}
+.experience-box p {
+    margin:  20px;
+    margin-top: 10px !important;
+    padding: 10px;
+    padding-top: 0 !important;
+    font-size: 1rem;
+}
+
+

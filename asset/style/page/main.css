@@ -73,34 +73,19 @@ img {
 /* Heading 2 title styling */
 h2.title {
   padding: 10px;
-	font-size: 14rem;
+  font-size: 3rem;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 1;
 	color: rgba(0, 0, 0, 0.06);
 	text-transform: uppercase;
 	position: absolute;
-	top: -4px;
+  top: 0.5rem;
 	width: 100%;
 	pointer-events: none;
 }
+  
 
-/* Paragraph styling with margin, font size, and color
-
-p {
-	margin: 0 10px 10px 0;
-	font-weight: 400;
-	font-size: 2rem;
-	line-height: 28px;
-	color: var(--color-5);
-} */
-
-/* Styling for the first letter of the first paragraph inside a container 
-.paragraph p:first-child:first-letter {
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 36px;
-}*/
 
 /* Button styling with margin, padding, font size, color, and transition */
 .common-btn {
@@ -168,26 +153,7 @@ p {
 }
 
 
-/* 모바일 및 데스크탑 장치에 대한 반응형 스타일 */
-
-/* 모바일 장치에 대한 스타일 */
-@media only screen and (max-width: 767px) {
-  h2.title {
-    font-size: 4rem; /* 모바일에서 큰 제목 크기 줄임 */
-    line-height: 1.2; /* 모바일에서 큰 제목의 줄 간격 조정 */
-    top: 0.5rem;
-
-  }
-  
-  .common-btn {
-    font-size: 14px; /* 모바일에서 버튼의 폰트 크기를 줄임 */
-    padding: 10px 15px; /* 모바일에서 버튼의 패딩을 조정 */
-  }
-}
-
-/* 데스크탑 및 태블릿 장치에 대한 스타일 */
 @media only screen and (min-width: 768px) {
-  /* 공통 스타일 */
   h2.title {
     font-size: 8rem; 
     line-height: 1.1;
@@ -196,17 +162,36 @@ p {
 
   p {
     margin: 0 1.5rem 1.5rem 0;
-    font-size: 16px; /* 데스크탑에서 단락의 폰트 크기 설정 */
-    line-height: 1.8; /* 데스크탑에서 단락의 줄 간격 조정 */
+    font-size: 16px; 
+    line-height: 1.8;
   }
 
   .common-btn {
-    font-size: 16px; /* 데스크탑에서 버튼의 폰트 크기 설정 */
-    padding: 15px 20px; /* 데스크탑에서 버튼의 패딩을 조정 */
+    font-size: 16px;
+    padding: 15px 20px;
   }
 }
 
 
+
+
+
+/* Paragraph styling with margin, font size, and color
+
+p {
+	margin: 0 10px 10px 0;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 28px;
+	color: var(--color-5);
+} */
+
+/* Styling for the first letter of the first paragraph inside a container 
+.paragraph p:first-child:first-letter {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 36px;
+}*/
 
 
 /* Réglages pour 320px 
@@ -273,446 +258,6 @@ p {
 
 
 
-
-
-
-
-
-/* /////////////////////////// */
-/* /////// Experiences /////// */
-/* /////////////////////////// */
-
-
-/* Experience Section */
-#experiences-section {
-  background-color: #000; /* Dark background color */
-  color: #fff; /* Light text color */
-  padding: 200px 0; /* Padding for the entire section */
-  overflow: hidden; /* Prevent content overflow */
-}
-
-/* Container Styling */
-.container {
-  display: flex;
-  justify-content: space-around; /* Center content horizontally */
-  align-items: stretch; /* Stretch items to match the height */
-  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
-}
-
-/* Map Styling */
-#map {
-  height: 600px; /* Adjust map height */
-  width: 100%;
-}
-
-/* Experience Box Styling */
-.experience-box {
-  color: #fff; /* Light text color */
-  height: auto; /* Auto height to fit content */
-  z-index: 1;
-  position: relative;
-  overflow: hidden; /* Prevent content overflow */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Heading 3 Styling */
-.experience-box h3 {
-  font-size: 1.5em; /* Adjust heading font size */
-  margin: 20px; /* Space below the heading */
-}
-
-/* PopUp Map Styling */
-.list-experience {
-  flex: 1; /* Expand to fill available space */
-}
-
-.marker1 p a:hover {
-  background-color: #e6b01c; /* Background color on hover */
-  color: #000; /* Text color on hover */
-}
-
-/* Styling for text within the experience box */
-.marker1,
-.marker1 p a {
-  position: relative; /* Relative positioning for absolute child elements */
-  max-width: 100%;
-  padding: 10px;
-  color: var(--white);
-  border: 2px solid var(--primary);
-  font-size: 1rem;
-  width: calc(100% - 20px); /* Adjust width as needed */
-  white-space: pre-line; /* Preserve line breaks */
-}
-
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-  #map {
-    height: 400px; /* Adjust map height for smaller screens */
-}
-
-  .experience-box {
-    width: 100%; /* Box takes full width on smaller screens */
-  }
-}
-
-
-
-
-/* /////////////////////////// */
-/* /////// Portfolio ///////// */
-/* /////////////////////////// */
-
-
-.projects-section {
-	padding: 217px 0 0;
-}
-.project-box {
-	width: 100%;
-	height: 334px;
-	position: relative;
-}
-.project-box img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.project-box.big {
-  height: 100%;
-}
-.project-content {
-  padding: 2px 32px;
-  position: relative;
-  z-index: 1;
-}
-.project-content::before,
-.project-content::after {
-  position: absolute;
-  content: "";
-  height: 2px;
-  width: 130px;
-  background: var(--color-3);
-}
-.project-content::after {
-  right: 14px;
-  bottom: 3px;
-}
-.project-content::before {
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.project-content .bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.project-content p {
-  margin-bottom: 8px;
-  font-size: 16px;
-  line-height: 26px;
-}
-.project-content .common-btn {
-  padding: 8px 19px;
-}
-.project-content .common-btn img {
-  position: relative;
-}
-
-
-
-/* /////////////////////////////////////////////// */
-/* /// Formation & Motivation & Recommandation /// */
-/* /////////////////////////////////////////////// */
-
-/* Styling for the testify section */
-.testify-section {
-  padding: 180px 0 0;
-}
-
-/* Styling for the content within the testify section */
-.testify-section .content {
-  border: 2px solid var(--color-4);
-  padding: 40px 60px;
-  width: 100%;
-}
-
-/* Styling for the row within the testify section */
-.testify-section .row {
-  align-items: flex-end;
-}
-
-/* Styling for the headings within the content */
-.testify-section .content h3 {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  margin: 0px 0px 20px;
-  color: var(--color-1);
-}
-
-/* Styling for paragraphs within the content */
-.testify-section .content p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 26px;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--color-1);
-}
-
-/* Styling for the image box within the testify section */
-.testify-section .img-box {
-  width: 340px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-}
-
-/* Styling for images within the image box */
-.testify-section .img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Styling for reverse row within the testify section */
-.testify-section .reverse-row {
-  align-items: flex-start;
-}
-
-/* Styling for image box within reverse row */
-.testify-section .reverse-row .img-box {
-  margin-left: auto;
-}
-
-
-
-/* /////////////////////////// */
-/* ///////// Langue ////////// */
-/* /////////////////////////// */
-
-
-/* Styling for the langue section */
-.langue {
-  padding: 100px 0 76px;
-}
-
-/* Styling for the heading within the langue section */
-.langue h4 {
-  margin: 0 0 40px;
-  font-size: 40px;
-  line-height: 48px;
-  font-weight: 600;
-  color: var(--color-5);
-}
-
-/* Styling for hobby and langue navigation */
-.langue .nav-hobby,
-.langue .nav-langue {
-  width: 90%;
-}
-
-/* Styling for hobby and langue navigation items */
-.langue .nav-item-hobby,
-.langue .nav-item-langue {
-  margin: 0;
-  padding: 1.5rem; /* Unified padding for both items */
-  position: relative;
-  list-style: none; /* Remove list bullet points */
-}
-
-/* Styling for links and paragraphs within navigation items */
-.langue .nav-item-hobby .nav-link,
-.langue .nav-item-langue p {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
-  color: #333333;
-  padding: 0;
-  margin: 0; /* Remove default margin for paragraphs */
-}
-
-/* Styling for links and paragraphs within navigation items with adjusted color */
-.langue .nav-item-hobby .nav-link, p {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
-  color: var(--color-5);
-  padding: 0;
-  margin: 0; /* Remove default margin for paragraphs */
-}
-
-/* Styling for language navigation items with adjusted padding */
-.langue .nav-item-langue {
-  padding-left: 64px; /* Adjusted padding for language items */
-}
-
-/* Styling for images within language navigation items */
-.langue .nav-item-langue img {
-  position: absolute;
-  top: -2px;
-  left: 0;
-  width: 40px;
-  height: 60px;
-}
-
-/* Styling for langue-info section */
-.langue-info {
-  padding: 56px;
-  position: relative;
-  z-index: 1;
-  background-color: var(--color-5);
-}
-
-/* Styling for langue-box background */
-.langue-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--color-5);
-  z-index: -2;
-}
-
-/* Styling for langue-border */
-.langue-border {
-  left: 24px;
-  top: -24px;
-  position: absolute;
-  border: 2px solid var(--color-6);
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
-
-/* Styling for headings within langue-info */
-.langue-info h3 {
-  margin: 0 0 24px;
-  font-size: 64px;
-  line-height: 72px;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--color-3);
-}
-
-/* Styling for paragraphs within langue-info */
-.langue-info p {
-  margin-bottom: 48px;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 400;
-  color: var(--color-3);
-}
-
-
-/* /////////////////////////// */
-/* /////// Contact /////////// */
-/* /////////////////////////// */
-
-/* Styling for the contact-me section */
-.contact-me {
-  padding: 100px 0 76px;
-}
-
-/* Styling for the heading within the contact-me section */
-.contact-me h4 {
-  margin: 0 0 40px;
-  font-size: 32px;
-  line-height: 48px;
-  font-style: normal;
-  font-weight: 600;
-  color: var(--color-1);
-}
-
-/* Styling for the navigation within the contact-me section */
-.contact-me .nav {
-  width: 80%;
-}
-
-/* Styling for navigation items within the contact-me section */
-.contact-me .nav .nav-item {
-  margin: 0 0 24px;
-  padding: 0 0 0 64px;
-  position: relative;
-}
-
-/* Styling for images within navigation items */
-.contact-me .nav .nav-item img {
-  position: absolute;
-  top: -2px;
-  left: 0;
-  width: 32px;
-}
-
-/* Styling for links within navigation items */
-.contact-me .nav .nav-item .nav-link {
-  font-size: 18px;
-  line-height: 28px;
-  font-style: normal;
-  font-weight: 400;
-  color: #333333;
-  padding: 0;
-}
-
-/* Styling for the contact-info section */
-.contact-info {
-  padding: 56px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Styling for the contact-box background */
-.contact-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -2;
-}
-
-/* Styling for the contact-border */
-.contact-border {
-  left: 24px;
-  top: -24px;
-  position: absolute;
-  border: 2px solid var(--color-6);
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
-
-/* Styling for headings within contact-info */
-.contact-info h3 {
-  margin: 0 0 24px;
-  font-size: 64px;
-  line-height: 72px;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--color-3);
-}
-
-/* Styling for paragraphs within contact-info */
-.contact-info p {
-  margin-bottom: 48px;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 400;
-  color: var(--color-3);
-}
-
-
-
-
 /* /////////////////////////// */
 /* //// Button scroll up ///// */
 /* /////////////////////////// */
@@ -749,17 +294,6 @@ p {
 
 
 
-
-/* /////////////////////////// */
-/* ////////// Footer ///////// */
-/* /////////////////////////// */
-
-footer {
-  height: 50vh;
-  background-color: #000;
-  color: #fff;
-
-}
 
 
 

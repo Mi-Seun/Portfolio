@@ -1,0 +1,92 @@
+/* /////////////////////////// */
+/* /////// Contact /////////// */
+/* /////////////////////////// */
+
+/* Styling for the contact-me section */
+.contact-me {
+  padding: 12rem 0 2rem 0 ; 
+}
+  
+  /* Styling for the heading within the contact-me section */
+  .contact-me h4 {
+    margin: 0 0 40px;
+    font-size: 32px;
+    line-height: 48px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-1);
+  }
+  
+  /* Styling for the navigation within the contact-me section */
+  .contact-me .nav {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Styling for navigation items within the contact-me section */
+  .contact-me .nav .nav-item {
+    margin: 0 0 24px;
+    padding: 0 0 0 64px;
+    position: relative;
+    font-size: 20px;
+    width: 100% !important;
+  }
+  
+  /* Styling for images within navigation items */
+  .contact-me .nav .nav-item img {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 32px;
+  }
+  
+  /* Styling for links within navigation items */
+  .contact-me .nav .nav-item .nav-link {
+    font-size: 18px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 400;
+    color: #333333;
+    padding: 0;
+  }
+  
+  /* Styling for the contact-info section */
+  .contact-info {
+    padding: 56px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Styling for the contact-box background */
+  .contact-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    border: 2px solid var(--color-6);
+
+  }
+  
+
+  /* Styling for headings within contact-info */
+  .contact-info h3 {
+    margin: 0 0 24px;
+    font-size: 64px;
+    line-height: 72px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-3);
+  }
+  
+  /* Styling for paragraphs within contact-info */
+  .contact-info p {
+    margin-bottom: 48px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--color-3);
+  }
+  

@@ -1,0 +1,69 @@
+
+/* /////////////////////////////////////////////// */
+/* /// Formation & Motivation & Recommandation /// */
+/* /////////////////////////////////////////////// */
+
+/* Styling for the testify section */
+.testify-section {
+    padding: 12rem 0 0 0; 
+  }
+    
+    /* Styling for the content within the testify section */
+    .testify-section .content {
+      border: 2px solid var(--color-4);
+      padding: 40px 60px;
+      width: 100%;
+    }
+    
+    /* Styling for the row within the testify section */
+    .testify-section .row {
+      align-items: flex-end;
+    }
+    
+    /* Styling for the headings within the content */
+    .testify-section .content h3 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0px 0px 20px;
+      color: var(--color-1);
+      
+    }
+    
+    /* Styling for paragraphs within the content */
+    .testify-section .content p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 26px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--color-1);
+    }
+    
+    /* Styling for the image box within the testify section */
+    .testify-section .img-box {
+      width: 340px;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+    
+    /* Styling for images within the image box */
+    .testify-section .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    /* Styling for reverse row within the testify section */
+    .testify-section .reverse-row {
+      align-items: flex-start;
+    }
+    
+    /* Styling for image box within reverse row */
+    .testify-section .reverse-row .img-box {
+      margin-left: auto;
+    }
+    
+    
+    

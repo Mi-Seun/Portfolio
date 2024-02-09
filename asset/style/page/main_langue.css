@@ -1,0 +1,121 @@
+/* /////////////////////////// */
+/* ///////// Langue ////////// */
+/* /////////////////////////// */
+
+
+/* Styling for the langue section */
+.langue-section {
+    padding: 12rem 0 2rem 0 ; 
+  }
+  
+  /* Styling for the heading within the langue section */
+  .langue-section h4 {
+    padding: 10px;
+    font-size: 40px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--color-5);
+    text-align: start;
+  }
+  
+  /* Styling for hobby and langue navigation */
+  .langue-section .nav-hobby,
+  .langue-section .nav-langue {
+    width: 90%;
+  }
+  
+  /* Styling for hobby and langue navigation items */
+  .langue-section .nav-item-hobby,
+  .langue-section .nav-item-langue {
+    margin: 0;
+    padding: 1.5rem; /* Unified padding for both items */
+    position: relative;
+    list-style: none; /* Remove list bullet points */
+  }
+  
+  /* Styling for links and paragraphs within navigation items */
+  .langue-section .nav-item-hobby .nav-link,
+  .langue-section .nav-item-langue p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #333333;
+    padding: 0;
+    margin: 0; /* Remove default margin for paragraphs */
+  }
+  
+  /* Styling for links and paragraphs within navigation items with adjusted color */
+  .langue-section .nav-item-hobby .nav-link, p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--color-5);
+    padding: 0;
+    margin: 0; /* Remove default margin for paragraphs */
+  }
+  
+  /* Styling for language navigation items with adjusted padding */
+  .langue-section .nav-item-langue {
+    padding-left: 64px; /* Adjusted padding for language items */
+  }
+  
+  /* Styling for images within language navigation items */
+  .langue-section .nav-item-langue img {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 40px;
+    height: 60px;
+  }
+  
+  /* Styling for langue-info section */
+  .langue-info {
+    padding: 56px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-5);
+  }
+  
+  /* Styling for langue-box background */
+  .langue-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-5);
+    z-index: -2;
+  }
+  
+  /* Styling for langue-border */
+  .langue-border {
+    left: 24px;
+    top: -24px;
+    position: absolute;
+    border: 2px solid var(--color-6);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  /* Styling for headings within langue-info */
+  .langue-info h3 {
+    margin: 0 0 24px;
+    font-size: 64px;
+    line-height: 72px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-3);
+  }
+  
+  /* Styling for paragraphs within langue-info */
+  .langue-info p {
+    margin-bottom: 48px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--color-3);
+  }
+  
+
+  
