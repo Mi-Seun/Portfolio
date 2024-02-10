@@ -2,91 +2,97 @@
 /* /////// Contact /////////// */
 /* /////////////////////////// */
 
-/* Styling for the contact-me section */
 .contact-me {
-  padding: 12rem 0 2rem 0 ; 
+  padding: 16rem 0 2rem; /* 모바일 및 웹에서 상단 여백 및 하단 여백 조정 */
 }
-  
-  /* Styling for the heading within the contact-me section */
-  .contact-me h4 {
-    margin: 0 0 40px;
-    font-size: 32px;
-    line-height: 48px;
-    font-style: normal;
-    font-weight: 600;
-    color: var(--color-1);
-  }
-  
-  /* Styling for the navigation within the contact-me section */
-  .contact-me .nav {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Styling for navigation items within the contact-me section */
-  .contact-me .nav .nav-item {
-    margin: 0 0 24px;
-    padding: 0 0 0 64px;
-    position: relative;
-    font-size: 20px;
-    width: 100% !important;
-  }
-  
-  /* Styling for images within navigation items */
-  .contact-me .nav .nav-item img {
-    position: absolute;
-    top: -2px;
-    left: 0;
-    width: 32px;
-  }
-  
-  /* Styling for links within navigation items */
-  .contact-me .nav .nav-item .nav-link {
-    font-size: 18px;
-    line-height: 28px;
-    font-style: normal;
-    font-weight: 400;
-    color: #333333;
-    padding: 0;
-  }
-  
-  /* Styling for the contact-info section */
-  .contact-info {
-    padding: 56px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Styling for the contact-box background */
-  .contact-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -2;
-    border: 2px solid var(--color-6);
 
-  }
-  
+.contact-me h4 {
+  margin: 0 0 3rem; /* 모바일 및 웹에서 하단 여백 조정 */
+  font-size: 2rem; /* 모바일 및 웹에서 폰트 크기 조정 */
+  line-height: 3rem; /* 모바일 및 웹에서 줄 높이 조정 */
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-1);
+}
 
-  /* Styling for headings within contact-info */
-  .contact-info h3 {
-    margin: 0 0 24px;
-    font-size: 64px;
-    line-height: 72px;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: var(--color-3);
-  }
-  
-  /* Styling for paragraphs within contact-info */
-  .contact-info p {
-    margin-bottom: 48px;
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
-    color: var(--color-3);
-  }
-  
+.contact-me .nav-contact {
+  list-style-type: none; /* 리스트 스타일 제거 */
+  padding: 0; /* 내부 여백 제거 */
+}
+
+.contact-me .nav-contact .nav-contact-item {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 400;
+  /* width: 100% !important; */
+}
+
+.contact-me .nav-contact .nav-contact-item .nav-contact-link {
+  font-size: 1rem; /* 모바일 및 웹에서 폰트 크기 조정 */
+  line-height: 1.75rem; /* 모바일 및 웹에서 줄 높이 조정 */
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+  padding: 0;
+}
+
+.contact-info {
+  padding: 2rem; /* 모바일 및 웹에서 패딩 조정 */
+  position: relative;
+  z-index: 1;
+}
+
+.contact-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  border: 2px solid var(--white);
+}
+
+.contact-info h3 {
+  margin: 0 0 2rem; /* 모바일 및 웹에서 하단 여백 조정 */
+  font-size: 2rem; /* 모바일 및 웹에서 폰트 크기 조정 */
+  line-height: 2.25rem; /* 모바일 및 웹에서 줄 높이 조정 */
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+.contact-info p {
+  margin-bottom: 2rem; /* 모바일 및 웹에서 하단 여백 조정 */
+  font-size: 1rem; /* 모바일 및 웹에서 폰트 크기 조정 */
+  line-height: 1.625rem; /* 모바일 및 웹에서 줄 높이 조정 */
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+
+.outil-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  border: 2px solid var(--color-6);
+}
+
+.outil-info h3 {
+  margin: 0 0 2rem; /* 모바일 및 웹에서 하단 여백 조정 */
+  font-size: 2rem; /* 모바일 및 웹에서 폰트 크기 조정 */
+  line-height: 2.25rem; /* 모바일 및 웹에서 줄 높이 조정 */
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+.outil-info p {
+  margin-bottom: 2rem; /* 모바일 및 웹에서 하단 여백 조정 */
+  font-size: 1rem; /* 모바일 및 웹에서 폰트 크기 조정 */
+  line-height: 1.625rem; /* 모바일 및 웹에서 줄 높이 조정 */
+  font-weight: 400;
+  color: var(--color-3);
+}

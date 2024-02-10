@@ -2,8 +2,8 @@
 /* ////////// Footer ///////// */
 /* /////////////////////////// */
 
-  
-  footer {
+
+footer {
     background-color: #000;
     color: #fff;
     padding: 20px 0;
@@ -37,4 +37,5 @@ nav ul li a {
 nav ul li a:hover {
     color: #000;
 }
-  
+
+
