@@ -21,7 +21,7 @@ p {
 	--primary: #e6b01c;
 	--black: #000000;
 	--white: #ffffff;
-	--color-1: #333333;
+	--color-1: #757575;
 	--color-2: #cccccc;
 	--color-3: #2e4413;
 	--color-4: #1c1c1c;
@@ -144,7 +144,7 @@ h2.title {
 
 /* Dark theme styling for heading 2 title and paragraph */
 .theme-dark h2.title {
-	color: rgba(255, 252, 252, 0.18);
+	color: var(--color-1);
 }
 
 .theme-dark p {

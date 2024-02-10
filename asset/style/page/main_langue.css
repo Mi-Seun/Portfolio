@@ -2,16 +2,14 @@
 /* ///////// Langue ////////// */
 /* /////////////////////////// */
 
-
 .langues-section {
-  padding: 16rem 0 2rem 0 ;
+  padding: 16rem 0 2rem; 
 }
 
 .title-hobby {
   font-size: 3rem;
   color: var(--color-5);
 }
-
 
 .langues-section .nav-item-hobby,
 .langues-section .nav-item-langue {
@@ -21,31 +19,30 @@
 
 .langues-section .nav-item-hobby .nav-link,
 .langues-section .nav-item-langue p {
-  font-size: 18px;
+  font-size: 1.15rem;
   line-height: 2rem;
   font-weight: 400;
   color: #333333;
 }
 
-
 .langues-section .nav-item-langue {
-  padding-left: 64px;
+  padding-left: 3rem;
 }
+
 .detail-hobby {
-  padding: 10px 10px 60px 0;
+  padding: 0rem;
 }
 
 .langues-section .nav-item-langue img {
   position: absolute;
   top: -8px;
   left: 0;
-  width: 40px;
-  height: 60px;
+  width: 2.5rem;
+  height: 3.75rem;
 }
 
 .langue-info {
-  margin-top: 1rem;
-
+  margin: 1rem 0;
   padding: 2rem;
   position: relative;
   z-index: 1;
@@ -63,10 +60,16 @@
   z-index: -1;
 }
 
+.langue-info h3 {
+  margin: 0 0 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 .langue-border {
   padding: 1rem;
-  left: 20px;
-  top: -20px;
+  left: 1.25rem; 
+  top: -1.25rem; 
   position: absolute;
   border: 2px solid var(--color-6);
   height: 100%;
@@ -74,17 +77,35 @@
   z-index: -2;
 }
 
-.langue-info h3 {
-  margin: 0px 0px 40px;
-  font-size: 2.5rem !important;
-  text-transform: uppercase;
-}
-
 .langue-info p {
-  margin-bottom: 2rem;
-  font-size: 16px;
-  line-height: 2rem;
-  font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 768px) {
+
+  .langues-section {
+    padding: 8rem 0;
+    padding-bottom: 2rem !important;
+  }
+
+  .langues-section h2{
+    font-size: 2.9rem;
+    letter-spacing: -3px;
+  }
+
+  .title-hobby {
+    padding: 4rem 0 0 1rem;
+    font-size: 2.5rem;
+  }
   
+.nav-link {
+    padding-bottom: 3rem ;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #333333;
+  }
+}
