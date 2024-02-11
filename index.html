@@ -22,9 +22,8 @@
 			| SECTIONrecommendations________________________
 			| SECTIONmotivations____________________________
 			| SECTIONlanguages & hobbies____________________
-			| SECTIONcontact________________________________
-			| SECTIONskills used____________________________
-			
+			| SECTIONcontact & skills used _________________
+
 			FOOTER__________________________________________
 			
 			
@@ -52,8 +51,14 @@
 			| | SECTIONprotfolios_______________________________________________
             | |                 | | _main_project.css
 			| |                 | | 
-			| | SECTIONtrainings & recommandations & motivation_________________
-            | |                 | | _main_recommendations.css
+			| | SECTIONtrainings________________________________________________
+            | |                 | | _main_training.css
+			| |                 | | 
+			| | SECTIONrecommandations__________________________________________
+            | |                 | | _main_recommandation.css
+			| |                 | | 
+			| | SECTIONmotivation_______________________________________________
+            | |                 | | _main_motivation.css
 			| |                 | | 
 			| | SECTIONlanguages & hobbies______________________________________
             | |                 | | _main_langue.css
@@ -104,14 +109,14 @@
         </div>
         <ul class="ligne-metro" id="menu">
             <li><a href="#">Accueil ⭕️</a></li>            
-            <li><a href="#skills-section">Compétence ⭕️</a></li>
-            <li><a href="#experiences-section">Expérience ⭕️</a></li>
-            <li><a href="#projects-section">Portfolio ⭕️</a></li>
-            <li><a href="#trainings-section">Formation ⭕️</a></li>
-            <li><a href="#recommendations-section">Recommandation ⭕️</a></li>
+            <li><a href="#skills-section">compétences ⭕️</a></li>
+            <li><a href="#experiences-section">Expériences ⭕️</a></li>
+            <li><a href="#projects-section">Portfolios ⭕️</a></li>
+            <li><a href="#trainings-section">Formations ⭕️</a></li>
+            <li><a href="#recommendations-section">Recommandations ⭕️</a></li>
             <li><a href="#motivations-section">Motivation ⭕️</a></li>
-            <li><a href="#langues-section">Langue ⭕️</a></li>
-            <li><a href="#leisure-section">Loisir ⭕️</a></li>
+            <li><a href="#langues-section">Langues ⭕️</a></li>
+            <li><a href="#leisure-section">Loisirs ⭕️</a></li>
             <li><a href="#contact-section">Contact ⭕️</a></li>
         </ul>
     </nav>
@@ -200,15 +205,27 @@
                         <div class="popUp-skill">
                             <div class="text-skill part1">
                                 <h3>Développeur Web & mobile & Three.js</h3>
-                                <p class="detail-text-skill">HTML5<br>Angular<br>TypeScript<br>JavaScript<br>Three.js<br>WebGL<br>Symfony5<br>php<br>SQL<br>mySql<br>Wordpress<br>CSS3</p>
+                                <div class="detail-text-skill">
+                                    <i class="fa-brands fa-html5"></i>  HTML5<br>
+                                    <i class="fa-brands fa-angular"></i>  Angular<br>
+                                    <i>Ts</i>  TypeScript<br>
+                                    <i class="fa-brands fa-js"></i>  JavaScript<br>
+                                    <i class="fa-brands fa-unity"></i>  Three.js<br>
+                                    <i class="fa-solid fa-cubes"></i>  WebGL<br>
+                                    <i class="fa-brands fa-symfony"></i>  Symfony5<br>
+                                    <i class="fa-brands fa-php"></i>  php<br>
+                                    <i class="fa-solid fa-database"></i>  SQL<br>
+                                    <i class="fa-solid fa-server"></i>  mySql<br>
+                                    <i class="fa-brands fa-wordpress-simple"></i>  Wordpress<br>
+                                    <i class="fa-brands fa-css3-alt"></i>  CSS3</div>
                             </div>
                             <div class="text-skill part2">
                                 <h3>Infographie & UI Design</h3>
-                                <p class="detail-text-skill">Illustrator<br>Photoshop<br>Indesign<br>Premier Pro<br>Figma</p>
+                                <div class="detail-text-skill">Illustrator<br>Photoshop<br>Indesign<br>Premier Pro<br>Figma</div>
                             </div>
                             <div class="text-skill part3">
                                 <h3>Gestion de projet Agile</h3>
-                                <p class="detail-text-skill">Scrum<br>Git</p>
+                                <div class="detail-text-skill">Scrum<br>Git</div>
                             </div>
                         </div>
                     </div>
@@ -221,7 +238,7 @@
 
     <!-- Experiences Start -->
     <section id="experiences-section" class="experiences-section black-bg theme-dark position-relative">
-        <h2 class="title text-center">Expérience</h2>
+        <h2 class="title text-center">Expériences</h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -282,7 +299,7 @@
 
     <!-- Portfolio Start -->
     <section id="projects-section" class="projects-section white-bg position-relative overflow-hidden">
-        <h2 class="title text-center">Portfolio</h2>
+        <h2 class="title text-center">Portfolios</h2>
         <div class="container">
             <div class="row align-items-stretch overflow-hidden mb-5 gy-1 gy-md-0 gx-1 gx-md-3 gx-lg-4">
             <div class="col-md-9">
@@ -290,7 +307,8 @@
                     <div class="col-8">
                         <div class="project-box project-content pbox-left">
                         <img src="asset/images/metro/metro.jpeg" class="img-fluid" alt="Project">
-                        <a href="https://github.com/Mi-Seun" class="common-btn " target="_blank" rel="noopener">gitHub</a>
+                        <a href="https://github.com/Mi-Seun" class="common-btn " target="_blank" rel="noopener">
+                            <i class="fa-brands fa-github"></i>gitHub</a>
                         </div>
                     </div>
                     <div class="col-4">
@@ -308,7 +326,8 @@
                         <img src="asset/images/metro/bus.jpeg" class="img-fluid bg-img" alt="Project">
                         <div class="row align-items-center h-100">
                             <div class="col-10 col-md-8 col-xxl-7 ms-auto">
-                            <a href="https://www.linkedin.com/in/misun-jang/" class="common-btn" target="_blank" rel="noopener">Profile - Linkdin</a>>
+                            <a href="https://www.linkedin.com/in/misun-jang/" class="common-btn" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                         </div>
@@ -318,7 +337,8 @@
             <div class="col-md-3">
                 <div class="project-box project-content big pbox-right">
                     <img src="asset/images/metro/metro4.jpeg" class="img-fluid" alt="Project">
-                    <a href="https://www.behance.net/mi-sunjang" class="common-btn " target="_blank" rel="noopener">behance</a>
+                    <a href="https://www.behance.net/mi-sunjang" class="common-btn " target="_blank" rel="noopener">
+                        <i class="fa-brands fa-square-behance"></i>behance</a>
                 </div>
             </div>
             </div>
@@ -328,7 +348,7 @@
 
     <!-- Formation Start -->
     <section id="trainings-section" class="trainings-section black-bg theme-dark position-relative overflow-hidden">
-        <h2 class="title text-center">Formation</h2>
+        <h2 class="title text-center">Formations</h2>
         <div class="container">
             <div class="row g-0 left-row">
             <div class="col-md-6">
@@ -372,7 +392,7 @@
 
     <!-- Recommandation Start -->
     <section id="recommendations-section" class="recommendations-section white-bg position-relative overflow-hidden">
-        <h2 class="title text-center">Recommandation</h2>
+        <h2 class="title text-center">Recommandations</h2>
         <div class="container">
             <div class="row g-0 left-row">
             <div class="col-md-7">
@@ -432,7 +452,7 @@
 
     <!-- Langues & loisirs Start -->
     <section id="langues-section" class="langues-section black-bg theme-dark position-relative overflow-hidden">
-        <h2 class="title text-center">Langue & Loisir</h2>
+        <h2 class="title text-center">Langues & Loisirs</h2>
         <div class="container">
             <div class="row g-0 left-row">
             <div class="col-md-6">
@@ -476,12 +496,14 @@
                         <h4>Contact</h4>
                         <ul class="nav-contact flex-column">
                             <li class="nav-contact-item">
-                                <img src="" class="img-fluid" alt="Email">
-                                <a class="nav-contact-link" href="mailto:misun.jang@free.fr">misun.jang@free.fr</a>
+                                <img src="" class="img-fluid" alt="">
+                                <a class="nav-contact-link" href="mailto:misun.jang@free.fr">
+                                    <i class="fa-solid fa-at"></i> misun.jang@free.fr</a>
                             </li>
                             <li class="nav-contact-item">
-                                <img src="" class="img-fluid" alt="Tel.">
-                                <a class="nav-contact-link" href="tel:33782130660">07 82 13 06 60</a>
+                                <img src="" class="img-fluid" alt="">
+                                <a class="nav-contact-link" href="tel:33782130660">
+                                    <i class="fa-solid fa-mobile-screen-button"></i> 07 82 13 06 60</a>
                             </li>
                         </ul>
                     </div>
@@ -491,9 +513,15 @@
                         <div class="outil-box"></div>
                         <div class="outil-border"></div>
                         <h4>Outils utilisés</h4>
-                            <p>Langues : HTML, JavaScript, npm, webpack, Node.js, CSS, Bootstrap, SVG</p>
-                            <p>Design : Illustrator (Logo, Pointeurs de map, Icônes)</p>
-                            <p>Map : CartoDB, OSM, Esri, LyonMap</p>
+                            <div class="title-outil">Langues :
+                                <p> HTML, JavaScript, npm, webpack, Node.js, CSS, Bootstrap, SVG</p>
+                            </div>
+                            <div class="title-outil">Design : 
+                                <p>Illustrator (Logo, Pointeurs de map, Icônes)</p>
+                            </div>
+                            <div class="title-outil">Map : 
+                                <p>CartoDB, OSM, Esri, LyonMap</p>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -502,7 +530,9 @@
     <!-- Contact End -->
 
     <!-- Scroll up -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </div>
 
 </main>
 

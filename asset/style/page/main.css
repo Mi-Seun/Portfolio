@@ -72,19 +72,17 @@ img {
 
 /* Heading 2 title styling */
 h2.title {
-  padding: 10px;
-  font-size: 3rem;
+	padding: 10px;
+	font-size: 2.8rem;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 1;
 	text-transform: uppercase;
 	position: absolute;
-  top: 2rem;
+	top: 2rem;
 	width: 100%;
 	pointer-events: none;
 }
-  
-
 
 /* Button styling with margin, padding, font size, color, and transition */
 .common-btn {
@@ -153,107 +151,24 @@ h2.title {
 
 
 @media only screen and (min-width: 768px) {
-  h2.title {
-    font-size: 8rem; 
-    line-height: 1.1;
-    margin-top: 2rem;
-  }
 
-  p {
-    margin: 0 1.5rem 1.5rem 0;
-    font-size: 16px; 
-    line-height: 1.8;
-  }
+	h2.title {
+		font-size: 8rem; 
+		line-height: 1.1;
+		margin-top: 2rem;
+	}
 
-  .common-btn {
-    font-size: 16px;
-    padding: 15px 20px;
-  }
+	p {
+		margin: 0 1.5rem 1.5rem 0;
+		font-size: 16px; 
+		line-height: 1.8;
+	}
+
+	.common-btn {
+		font-size: 16px;
+		padding: 15px 20px;
+	}
 }
-
-
-
-
-
-/* Paragraph styling with margin, font size, and color
-
-p {
-	margin: 0 10px 10px 0;
-	font-weight: 400;
-	font-size: 2rem;
-	line-height: 28px;
-	color: var(--color-5);
-} */
-
-/* Styling for the first letter of the first paragraph inside a container 
-.paragraph p:first-child:first-letter {
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 36px;
-}*/
-
-
-/* Réglages pour 320px 
-@media screen and (max-width: 320px) {
-  h2.title {
-    font-size: 6rem;
-    top: -1rem;
-  }
-
-  p {
-      top: 0.5rem;
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-  }
-
-  .common-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-    gap: 0.3125rem;
-  }
-}
-*/
-/* Réglages pour 768px 
-@media screen and (min-width: 321px) and (max-width: 768px) {
-  h2.title {
-    font-size: 10rem;
-    top: -2rem;
-  }
-
-  p {
-    margin: 0 1.5rem 1.5rem 0;
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-
-  .common-btn {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    gap: 0.625rem;
-  }
-}
-*/
-/* Réglages pour 1024px 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  h2.title {
-    font-size: 15rem;
-    top: -3rem;
-  }
-
-  p {
-    margin: 0 2rem 2rem 0;
-    font-size: 1.2rem;
-    line-height: 2rem;
-  }
-
-  .common-btn {
-    padding: 1.5rem 2rem;
-    font-size: 1.2rem;
-    gap: 0.75rem;
-  }
-}
-*/
-
 
 
 
@@ -262,33 +177,33 @@ p {
 /* /////////////////////////// */
 
 #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 6%; /* Adjusted distance from the bottom for better responsiveness */
-  right: 6%; /* Adjusted distance from the right for better responsiveness */
-  z-index: 99;
-  font-size: 2vw; /* Responsive font size */
-  border: none;
-  outline: none;
-  background-color: var(--primary);
-  color: white;
-  cursor: pointer;
-  padding: 1vw; /* Responsive padding */
-  border-radius: 6px; /* Make it circular */
+	display: none;
+	position: fixed;
+	bottom: 6%;
+	right: 6%; 
+	z-index: 99;
+	font-size: 3rem; 
+	border: none;
+	outline: none;
+	color: var(--primary);
+	cursor: pointer;
+	padding: 1vw;
+	border-radius: 6px; 
 }
 
 #myBtn:hover {
-  background-color: #555;
+	color: #555;
 }
 
 /* Media Query for Small Screens */
 @media screen and (max-width: 768px) {
-  #myBtn {
-    font-size: 4vw; /* Responsive font size for small screens */
-    bottom: 6%; /* Adjusted distance from the bottom for small screens */
-    right: 6%; /* Adjusted distance from the right for small screens */
-    padding: 1vw; /* Responsive padding for small screens */
-  }
+
+	#myBtn {
+		font-size: 2.5rem; 
+		bottom: 6%; 
+		right: 6%; 
+		padding: 1vw;
+	}
 }
 
 

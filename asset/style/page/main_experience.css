@@ -67,6 +67,7 @@
 
     #map {
         height: 600px;
+        right: 1rem !important;
     }
 
     .leaflet-marker-icon {
@@ -89,7 +90,7 @@
     }
 
     .experiences-section h2{
-        letter-spacing: -1px;
+        font-size: 2.3rem;
     }
 
     .experience-box {

@@ -69,7 +69,7 @@
 .popUp-skill p {
     color: var(--color-1);
     line-height: 2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 #skills-section {
@@ -85,6 +85,13 @@
 .detail-text-skill {
     margin: 1.5rem;
     padding-left: 20px;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+.detail-text-skill i {
+    color: var(--color-4);
+    font-size: 1.5rem;
 }
 
 
@@ -117,6 +124,7 @@
     }
 
     .detail-text-skill {
+        text-align: left;
         padding: 10px;
     }
 
