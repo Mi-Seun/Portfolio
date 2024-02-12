@@ -30,7 +30,11 @@
 }
 
 .detail-hobby {
-  padding: 0rem;
+  padding: 0;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2rem;
 }
 
 .langues-section .nav-item-langue img {
@@ -107,4 +111,15 @@
     font-weight: 400;
     color: #333333;
   }
+
+  .langue-border {
+    border: none;
+  }
+
+  .langue-info {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  
 }

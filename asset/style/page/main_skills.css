@@ -98,10 +98,12 @@
 @media only screen and (max-width: 768px) {
 
     .skill-section {
-        padding: 7rem 0 0 0;
+        padding: 8rem 0 0 0;
     }
+
     .skill-section h2{
         font-size: 2.3rem;
+        letter-spacing: -2px;
     }
 
 

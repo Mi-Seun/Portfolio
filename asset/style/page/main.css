@@ -192,7 +192,8 @@ h2.title {
 }
 
 #myBtn:hover {
-	color: #555;
+	color: var(--primary);
+
 }
 
 /* Media Query for Small Screens */

@@ -3,14 +3,14 @@
 /* ////////////////////////////////// */
 
 .recommendations-section {
-    padding: 16rem 0 0 0;
+    padding: 16rem 0 2rem 0;
 }
 
 .recommendations-section .content {
     border: 2px solid var(--color-4);
     padding: 40px 10px 40px 10px;
     width: 100%;
-    margin: 1rem 1rem 1rem 0;
+    margin: 1rem 1rem 2rem 0;
 }
 
 .recommendations-section .row {
@@ -44,15 +44,12 @@
 
     .recommendations-section {
         padding: 8rem 0;
-        padding-bottom: 1rem !important;
     }
 
     .recommendations-section h2{
-        font-size: 2rem;
-        letter-spacing: -4px;
+        font-size: 1.7rem;
+        letter-spacing: -2px;
     }
-    
-
 
     .recommendations-section .content h3 {
         font-size: 1.5rem;
@@ -64,6 +61,7 @@
         font-size: 1rem; 
         line-height: 24px; 
     }
+
 }
 
 

@@ -4,12 +4,13 @@
 
 @import url("page/main.css");
 @import url("page/main_contact.css");
-@import url("page/main_experience.css");
-@import url("page/main_training.css");
-@import url("page/main_langue.css");
+@import url("page/main_experiences.css");
+@import url("page/main_trainings.css");
+@import url("page/main_langues_hobbies.css");
 @import url("page/main_motivation.css");
 @import url("page/main_presentation.css");
-@import url("page/main_project.css");
-@import url("page/main_recommandation.css");
-@import url("page/main_skill.css");
+@import url("page/main_projects.css");
+@import url("page/main_recommandations.css");
+@import url("page/main_skills.css");
+
 
