@@ -86,17 +86,21 @@
   font-size: 1rem;
 }
 
+.box-hobby {
+  margin: 0;
+  padding: 0;
+}
 
 /* Responsive Styles for Mobile Devices */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px)  {
 
   .langues-section {
     padding: 8rem 0;
-    padding-bottom: 2rem !important;
   }
 
   .langues-section h2{
-    font-size: 2.3rem;
+    font-size: 2rem;
+    letter-spacing: -2px;
   }
 
   .title-hobby {
@@ -120,6 +124,4 @@
     margin: 1rem;
     padding: 1rem;
   }
-  
-  
 }

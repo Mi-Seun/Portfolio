@@ -47,7 +47,7 @@
     }
 
     .recommendations-section h2{
-        font-size: 1.7rem;
+        font-size: 1.7rem !important;
         letter-spacing: -2px;
     }
 
@@ -60,6 +60,16 @@
     .recommendations-section .content p {
         font-size: 1rem; 
         line-height: 24px; 
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .recommendations-section h2{
+        font-size: 5rem;
+        letter-spacing: -2px;
     }
 
 }

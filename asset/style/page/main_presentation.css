@@ -89,9 +89,11 @@
 }
 
 .presentation-text p {
-    margin-bottom: 10px;
-    font-size: 1.25rem !important; 
-    line-height: 30px;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 2rem;
 }
 
 
@@ -136,7 +138,7 @@
         line-height: 2rem;
     }
     .presentation-text p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 2rem;
     }
 }

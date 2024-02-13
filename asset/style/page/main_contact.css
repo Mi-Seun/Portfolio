@@ -114,6 +114,8 @@
 
   .contact-me h2{
     font-size: 2.3rem;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   .outil-box {
@@ -123,7 +125,5 @@
   .outil-info {
     margin: 1rem;
   }
-
-
-  }
+}
 
