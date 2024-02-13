@@ -108,14 +108,18 @@
 @media only screen and (max-width: 768px) {
 
   .contact-me {
-    padding: 8rem 0;
-    padding-bottom: 2rem !important;
+    padding: 7rem 0 2rem 0;
+    /* padding-bottom: 2rem !important; */
   }
 
   .contact-me h2{
     font-size: 2.3rem;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+    /* margin-bottom: 0 !important;*/
+    /* padding-bottom: 0 !important;  */
+  }
+
+  .title-hobby {
+    padding-top: 0 !important;
   }
 
   .outil-box {

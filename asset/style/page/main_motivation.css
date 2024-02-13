@@ -15,8 +15,9 @@ padding: 16rem 0 0 0;
 }
 
 .motivations-section .content h3 {
-  margin: 0px 0px 20px;
-  color: var(--black);
+  margin: 20px;
+  padding: 10px;
+color: var(--black);
   font-weight: 600;
   line-height: 30px;
 }
@@ -36,8 +37,7 @@ padding: 16rem 0 0 0;
 @media only screen and (max-width: 768px) {
 
   .motivations-section {
-    padding: 8rem 0;
-    padding-bottom: 2rem !important;
+    padding: 7rem 0 2rem 0 ;
   }
 
   .motivations-section h2{

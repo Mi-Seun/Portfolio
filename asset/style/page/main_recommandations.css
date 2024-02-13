@@ -43,7 +43,7 @@
 @media only screen and (max-width: 768px) {
 
     .recommendations-section {
-        padding: 8rem 0;
+        padding: 7rem 0 0 0;
     }
 
     .recommendations-section h2{
