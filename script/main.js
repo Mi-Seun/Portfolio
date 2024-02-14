@@ -1,47 +1,54 @@
-/* /////////////////////////// */
-/* /////// Navigation //////// */
-/* /////////////////////////// */
+/* ///////////////////////////////// */
+/* ////// Header : navigation ////// */
+/* ///////////////////////////////////// */
 
 
-// Event listener for DOMContentLoaded to load the script when the document is ready
+
+
+// 페이지가 로드될 때 스크립트를 실행하기 위한 DOMContentLoaded 이벤트 리스너
 document.addEventListener('DOMContentLoaded', function () {
-    // DOM element selection for the menu
+    // 메뉴 관련 DOM 요소를 선택합니다.
     const menuIcon = document.querySelector('.menu-icon');
-    const menuCheckbox = document.querySelector('.menu-btn input[type="checkbox"]'); // Select the checkbox input
+    const menuCheckbox = document.querySelector('.menu-btn');
     const menu = document.querySelector('.ligne-metro');
 
-    // Click event on the menu icon
+    // 메뉴 아이콘을 클릭하는 이벤트 핸들러
     menuIcon.addEventListener('click', function () {
         console.log("Click detected");
-        menuCheckbox.checked = !menuCheckbox.checked; // Toggle the state of the checkbox
-        menu.classList.toggle('menu-open');
+        menuCheckbox.checked = !menuCheckbox.checked; // 체크박스의 상태를 토글합니다.
+        menu.classList.toggle('menu-open'); // 메뉴가 열렸는지 닫혔는지 클래스를 토글합니다.
+        
+        // 버거 아이콘을 닫기 아이콘으로 변경합니다.
+        if (menuCheckbox.checked) {
+            menuIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+            menuIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+
         console.log(menu.classList);
     });
 });
 
-// Event listener for smooth scrolling when a navigation link is clicked
+// 내비게이션 링크를 클릭하여 스무스한 스크롤링 이벤트를 처리하는 부분입니다.
 document.querySelectorAll('.nav a').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetSection = document.querySelector(this.getAttribute('href'));
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        e.preventDefault(); // 기본 동작을 막습니다.
+        const targetSection = document.querySelector(this.getAttribute('href')); // 목표 섹션을 가져옵니다.
+        targetSection.scrollIntoView({ behavior: 'smooth' }); // 스무스한 스크롤링으로 해당 섹션으로 이동합니다.
     });
 });
-
 
 
 /* ///////////////////////////////////// */
 /* ////////// Part of skills /////////// */
 /* ///////////////////////////////////// */
-
-// JavaScript pour gérer les clics sur les éléments de compétence//
-
-
+// JavaScript pour gérer les clics sur les éléments de compétence
 document.addEventListener("DOMContentLoaded", function() {
     const partSkills = document.querySelectorAll('.part-skill');
 
     partSkills.forEach(partSkill => {
         partSkill.addEventListener('click', function() {
+            // 클릭된 부분의 부모 엘리먼트에서 해당하는 pop-up의 인덱스를 찾습니다.
             const index = Array.from(partSkill.parentNode.children).indexOf(partSkill);
             
             const popUps = document.querySelectorAll('.popUp-skill .text-skill');
@@ -51,6 +58,27 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             popUps[index].style.display = 'block';
+
+            // 모바일 화면에서만 해당 pop-up 내용으로 스크롤합니다.
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                scrollToSkill(popUps[index]);
+            }
+        });
+    });
+});
+function scrollToSkill(partNumber) {
+    // 해당 부분의 pop-up 요소로 스크롤합니다.
+    const popUp = document.querySelector(`.popUp-skill .text-skill.part${partNumber}`);
+    const yOffset = window.innerHeight - popUp.offsetHeight;
+    window.scrollTo({ top: popUp.offsetTop + yOffset, behavior: 'smooth' });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const partSkills = document.querySelectorAll('.part-skill');
+
+    partSkills.forEach((partSkill, index) => {
+        partSkill.addEventListener('click', function() {
+            scrollToSkill(index + 1);
         });
     });
 });

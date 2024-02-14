@@ -104,8 +104,8 @@
             </a>
         </div>
         <div class="menu-btn">
-            <input type="checkbox" class="menu-btn" id="menu-btn">
-            <label for="menu-btn" class="menu-icon">&#9776;</label>
+            <input type="checkbox" class="menu-btn" id="menu-btn" placeholder="">
+            <label for="menu-btn" class="menu-icon" placeholder="menu-button-burger"><i class="fa-solid fa-bars"></i></label>
         </div>
         <ul class="ligne-metro" id="menu">
             <li><a href="#">Accueil ⭕️</a></li>            
@@ -186,48 +186,48 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="skill-box position-relative">
-                        <div class="part-skill part1" onclick="window.location">
+                        <div class="part-skill part1" onclick="scrollToSkill(1)">
                             <img src="asset/images/map/world_map1.jpg" class="img-fluid" alt="skill of developer">
                             <a href="javascript:void(0)" class="common-btn">Développeur web & Three.js</a>
                         </div>
-                        <div class="part-skill part2" onclick="window.location">
+                        <div class="part-skill part2" onclick="scrollToSkill(2)">
                             <img src="asset/images/map/map12.jpeg" class="img-fluid" alt="skill of designer">
                             <a href="javascript:void(0)" class="common-btn">Infographiste - UI Designe</a>
                         </div>
-                        <div class="part-skill part3" onclick="window.location">
+                        <div class="part-skill part3" onclick="scrollToSkill(3)">
                             <img src="asset/images/map/world_map2.jpg" class="img-fluid" alt="skill of management">
                             <a href="javascript:void(0)" class="common-btn">Gestion de projet Agile</a>
                         </div>
                         <div class="box-border"></div>
                     </div>
                 </div>
+                
                 <div class="col-md-6 align-self-center">
-                        <div class="popUp-skill">
-                            <div class="text-skill part1">
-                                <h3>Développeur Web & mobile & Three.js</h3>
-                                <div class="detail-text-skill">
-                                    <i class="fa-brands fa-html5"></i>  HTML5<br>
-                                    <i class="fa-brands fa-css3-alt"></i>  CSS3<br>
-                                    <i class="fa-brands fa-angular"></i>  Angular<br>
-                                    <i>Ts</i>  TypeScript<br>
-                                    <i class="fa-brands fa-js"></i>  JavaScript<br>
-                                    <i class="fa-brands fa-unity"></i>  Three.js<br>
-                                    <i class="fa-solid fa-cubes"></i>  WebGL<br>
-                                    <i class="fa-brands fa-symfony"></i>  Symfony5<br>
-                                    <i class="fa-brands fa-php"></i>  php<br>
-                                    <i class="fa-solid fa-database"></i>  SQL<br>
-                                    <i class="fa-solid fa-server"></i>  mySql<br>
-                                    <i class="fa-brands fa-wordpress-simple"></i>  Wordpress<br>
-                                </div>
+                    <div class="popUp-skill">
+                        <div class="text-skill part1">
+                            <h3>Développeur Web & mobile & Three.js</h3>
+                            <div class="detail-text-skill">
+                                <i class="fa-brands fa-html5"></i>  HTML5<br>
+                                <i class="fa-brands fa-css3-alt"></i>  CSS3<br>
+                                <i class="fa-brands fa-angular"></i>  Angular<br>
+                                <i>Ts</i>  TypeScript<br>
+                                <i class="fa-brands fa-js"></i>  JavaScript<br>
+                                <i class="fa-brands fa-unity"></i>  Three.js<br>
+                                <i class="fa-solid fa-cubes"></i>  WebGL<br>
+                                <i class="fa-brands fa-symfony"></i>  Symfony5<br>
+                                <i class="fa-brands fa-php"></i>  php<br>
+                                <i class="fa-solid fa-database"></i>  SQL<br>
+                                <i class="fa-solid fa-server"></i>  mySql<br>
+                                <i class="fa-brands fa-wordpress-simple"></i>  Wordpress<br>
                             </div>
-                            <div class="text-skill part2">
-                                <h3>Infographie & UI Design</h3>
-                                <div class="detail-text-skill">Illustrator<br>Photoshop<br>Indesign<br>Premier Pro<br>Figma</div>
-                            </div>
-                            <div class="text-skill part3">
-                                <h3>Gestion de projet Agile</h3>
-                                <div class="detail-text-skill">Scrum<br>Git</div>
-                            </div>
+                        </div>
+                        <div class="text-skill part2">
+                            <h3>Infographie & UI Design</h3>
+                            <div class="detail-text-skill">Illustrator<br>Photoshop<br>Indesign<br>Premier Pro<br>Figma</div>
+                        </div>
+                        <div class="text-skill part3">
+                            <h3>Gestion de projet Agile</h3>
+                            <div class="detail-text-skill">Scrum<br>Git</div>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@
                 <div class="col-md-6">
                     <div class="experience-box position-relative">
                         <div class="list-experience">
-                            <div class="popUp-experience">
+                            <div class="experience">
                                 <div class="text-experience part1">
                                     <h3>Imfomatique</h3>
                                     <h5>Développeur web 2023</h5>
@@ -558,8 +558,8 @@
             <ul>
                 <!-- plan de site
                 <li><a href="pages/plan_du_site.html">Plan du site</a></li>-->
-                <li><a href="pages/mention_legale.html">Mentions légales</a></li>
                 <li><a href="pages/PDC.html">Politique de confidentialité</a></li>
+                <li><a href="pages/mention_legale.html">Mentions légales</a></li>
             </ul>
         </nav>
     </div>

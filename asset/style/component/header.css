@@ -1,9 +1,3 @@
-
-/* /////////////////////////// */
-/* /////// Navigation //////// */
-/* /////////////////////////// */
-
-
 /* Navigation bar styling */
 .nav {
     display: flex;
@@ -20,32 +14,15 @@
     border: none;
 }
 
-/* Styling for the open and close menu icons */
-.menu-btn .menu-open-icon,
-.menu-btn .menu-close-icon {
+/* Styling for the menu icon */
+.menu-btn .menu-icon {
     display: block;
     font-size: 2rem;
-    transition: 0.3s;
-}
-
-/* Styling for the inner lines of the hamburger icon */
-.menu-btn .menu-open-icon span,
-.menu-btn .menu-close-icon span {
-    display: block;
-    height: 3px;
-    width: 25px;
-    margin: 5px 0;
-    background-color: #000;
-    transition: 0.3s;
-}
-
-/* Styling for the close menu icon */
-    .menu-btn .menu-close-icon {
-    display: none;
+    cursor: pointer;
 }
 
 /* Checkbox input styling in the menu button */
-    .menu-btn input[type="checkbox"] {
+.menu-btn input[type="checkbox"] {
     display: none;
 }
 
@@ -104,35 +81,43 @@
         display: block;
     }
 
-    .menu-icon {
+    #menu.menu-open {
         display: block;
-        font-size: 2rem;
-        cursor: pointer;
     }
 
     .ligne-metro {
         display: none;
-        position: auto;
+        position: absolute;
         top: 100%;
         left: 0;
-        right: 40px;
+        right: 0;
         background-color: #f8f8f8;
         width: 100%;
         text-align: center;
         z-index: 999;
     }
 
-    .menu-open .ligne-metro {
+    .menu-open .ligne-metro li {
         display: block;
+        margin: 0;
+        padding: 10px;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #ccc;
     }
 
     .ligne-metro li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform:none;
         margin: 0;
-        padding: 10px;
-        text-align: right;
-        font-size: 0.7rem;
+        margin-top: 10px;
+        text-align: left;
+        transform: none !important;
+        font-size: 1.2rem;
+        transition: color 0.3s, font-size 0.3s;
     }
-
+    
     #menu {
         display: none;
         position: absolute;
@@ -144,13 +129,23 @@
 
     .ligne-metro li:hover,
     .ligne-metro li:active {
-    color: #808080;
-    font-size: 0.9rem;
+        color: #808080;
+        font-size: 0.9rem;
     }
 
+    .ligne-metro {
+        writing-mode: horizontal-tb;
+    }
 
-    #menu.menu-open {
+    .ligne-metro li {
         display: block;
+        transform-origin: left center;
+        margin: 20px;
+        margin-top: 10px;
+        text-align: right;
+        font-size: 1.2rem;
+        right: 10px;
+        transition: color 0.3s, font-size 0.3s;
     }
 }
 
