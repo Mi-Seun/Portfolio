@@ -3,8 +3,6 @@
 /* ///////////////////////////////////// */
 
 
-
-
 // 페이지가 로드될 때 스크립트를 실행하기 위한 DOMContentLoaded 이벤트 리스너
 document.addEventListener('DOMContentLoaded', function () {
     // 메뉴 관련 DOM 요소를 선택합니다.
@@ -42,13 +40,15 @@ document.querySelectorAll('.nav a').forEach(link => {
 /* ///////////////////////////////////// */
 /* ////////// Part of skills /////////// */
 /* ///////////////////////////////////// */
-// JavaScript pour gérer les clics sur les éléments de compétence
+
+// JavaScript pour gérer les clics sur les éléments de compétence//
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const partSkills = document.querySelectorAll('.part-skill');
 
     partSkills.forEach(partSkill => {
         partSkill.addEventListener('click', function() {
-            // 클릭된 부분의 부모 엘리먼트에서 해당하는 pop-up의 인덱스를 찾습니다.
             const index = Array.from(partSkill.parentNode.children).indexOf(partSkill);
             
             const popUps = document.querySelectorAll('.popUp-skill .text-skill');
@@ -58,27 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             popUps[index].style.display = 'block';
-
-            // 모바일 화면에서만 해당 pop-up 내용으로 스크롤합니다.
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                scrollToSkill(popUps[index]);
-            }
-        });
-    });
-});
-function scrollToSkill(partNumber) {
-    // 해당 부분의 pop-up 요소로 스크롤합니다.
-    const popUp = document.querySelector(`.popUp-skill .text-skill.part${partNumber}`);
-    const yOffset = window.innerHeight - popUp.offsetHeight;
-    window.scrollTo({ top: popUp.offsetTop + yOffset, behavior: 'smooth' });
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const partSkills = document.querySelectorAll('.part-skill');
-
-    partSkills.forEach((partSkill, index) => {
-        partSkill.addEventListener('click', function() {
-            scrollToSkill(index + 1);
         });
     });
 });
@@ -167,7 +146,7 @@ let markerLondon = addMarkerToMap([51.5074, -0.1278], ongIcon,
     "<b>Humanitaire 2019<br><br>- ONG de bénévolat caritatif, Londres<br>- Chef d'équipe, Aide sociale, Cuisinier</b>", 13);
 let markerSeoul = addMarkerToMap([37.5665, 126.9780], ongIcon,
     "<b>Ademistration - KIMM (Institut coréen de machines et de matériaux) <br><br>- Secrétaire </b>", 13);
-let markerMonde = addMarkerToMap([-23.885838, 126.5625], globalIcon, 
+let markerOceanie = addMarkerToMap([-23.885838, 126.5625], globalIcon, 
     "<b>Réseaux 2011- 2019 - KOWWINER<br><br>- Gérantes d’entreprises internationales</b>", 13);
 let markerEurope = addMarkerToMap([48.136767, 16.435547], globalIcon, 
     "<b>Réseaux 2014 - Fédération des Coréens en Europe<br><br>- Représentant la France</b>", 13);
@@ -184,14 +163,11 @@ L.control.layers(null, {
     "Europe": L.layerGroup([marker1, marker2, marker3, marker4, marker5, marker6, markerEurope, markerLondon]),
     "Afrique": L.layerGroup([markerAfrica]),
     "Asie": L.layerGroup([markerSeoul]),
-    "Monde": L.layerGroup([markerMonde])
+    "Océanie": L.layerGroup([markerOceanie])
 }, {
     position: 'bottomright',
     collapsed: false
 }).addTo(map);
-
-
-
 
 
 /* /////////////////////////////////// */
