@@ -83,14 +83,13 @@
     }
 
     .project-box {
-            display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .project-content .common-btn {
-
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         padding: 4px;
     }
     

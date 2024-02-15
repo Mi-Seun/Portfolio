@@ -1,6 +1,6 @@
 /* ///////////////////////////////// */
 /* ////// Header : navigation ////// */
-/* ///////////////////////////////////// */
+/* ///////////////////////////////// */
 
 
 // 페이지가 로드될 때 스크립트를 실행하기 위한 DOMContentLoaded 이벤트 리스너
@@ -96,7 +96,6 @@ function createCustomIcon(iconUrl) {
         popupAnchor: [0, -32] // Position de la popup par rapport à l'icône
     });
 }
-
 function onMapClick(e) {
     alert("You clicked the map at " + e.latlng);
 }
